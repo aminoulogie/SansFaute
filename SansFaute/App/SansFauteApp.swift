@@ -21,15 +21,17 @@ struct RootView: View {
     var body: some View {
         TabView {
             TodayView()
-                .tabItem { Label("Aujourd'hui", systemImage: "sun.max") }
+                .tabItem { Label("Aujourd'hui", systemImage: "sun.max.fill") }
             ListeningHomeView()
                 .tabItem { Label("Écoute", systemImage: "headphones") }
             GrammarHomeView()
                 .tabItem { Label("Grammaire", systemImage: "textformat") }
             VocabHomeView()
-                .tabItem { Label("Mots", systemImage: "rectangle.stack") }
+                .tabItem { Label("Mots", systemImage: "rectangle.stack.fill") }
             TestsHomeView()
-                .tabItem { Label("Tests", systemImage: "checkmark.seal") }
+                .tabItem { Label("Tests", systemImage: "chart.line.uptrend.xyaxis") }
         }
+        .toolbarBackground(Theme.card, for: .tabBar)
+        .toolbarBackground(.visible, for: .tabBar)
     }
 }

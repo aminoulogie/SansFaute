@@ -68,6 +68,13 @@ struct ReadingItem: Codable, Identifiable, Hashable {
     let questions: [Question]
 }
 
+struct DictationItem: Codable, Identifiable, Hashable {
+    let id: String
+    let level: String
+    let focus: String
+    let text: String
+}
+
 struct PlanTask: Codable, Hashable {
     let kind: String
     let minutes: Int

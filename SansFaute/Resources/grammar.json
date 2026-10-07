@@ -1748,5 +1748,523 @@
   ],
   "answer": 0,
   "explanation": "Le nom de reporter est le report. Reportage est un autre mot (journalisme)."
+ },
+ {
+  "id": "g126",
+  "topic": "subj_conj",
+  "level": "C1",
+  "prompt": "Il faut agir vite, en attendant que la situation se ___.",
+  "options": [
+   "stabilise",
+   "stabilisera",
+   "stabilisait",
+   "stabiliserait"
+  ],
+  "answer": 0,
+  "explanation": "En attendant que impose le subjonctif : qu'elle se stabilise."
+ },
+ {
+  "id": "g127",
+  "topic": "subj_conj",
+  "level": "C2",
+  "prompt": "Il est parti sans qu'on ___ lui dire au revoir.",
+  "options": [
+   "ait pu",
+   "a pu",
+   "pourrait",
+   "pouvait"
+  ],
+  "answer": 0,
+  "explanation": "Sans que impose le subjonctif, ici passé : qu'on ait pu."
+ },
+ {
+  "id": "g128",
+  "topic": "subj_conj",
+  "level": "C1",
+  "prompt": "Je te prête mon ordinateur pourvu que tu me le ___ demain.",
+  "options": [
+   "rendes",
+   "rends",
+   "rendras",
+   "rendrais"
+  ],
+  "answer": 0,
+  "explanation": "Pourvu que + subjonctif."
+ },
+ {
+  "id": "g129",
+  "topic": "subj_conj",
+  "level": "C1",
+  "prompt": "Puisqu'il ___ en retard, nous commencerons sans lui.",
+  "options": [
+   "soit",
+   "est",
+   "sera",
+   "serait"
+  ],
+  "answer": 1,
+  "explanation": "Puisque exprime une cause connue et prend l'indicatif."
+ },
+ {
+  "id": "g130",
+  "topic": "subj_verbes",
+  "level": "C1",
+  "prompt": "Je doute qu'il ___ la réponse.",
+  "options": [
+   "connaît",
+   "connaisse",
+   "connaîtra",
+   "connaissait"
+  ],
+  "answer": 1,
+  "explanation": "Douter que exprime l'incertitude : subjonctif."
+ },
+ {
+  "id": "g131",
+  "topic": "subj_verbes",
+  "level": "C1",
+  "prompt": "Je ne doute pas qu'il ___ la réponse.",
+  "options": [
+   "connaisse",
+   "connaît",
+   "connaîtrait",
+   "a connu"
+  ],
+  "answer": 0,
+  "explanation": "Ne pas douter que garde en principe le subjonctif dans la langue soignée."
+ },
+ {
+  "id": "g132",
+  "topic": "subj_verbes",
+  "level": "C2",
+  "prompt": "Où que vous ___, vous trouverez des ingénieurs francophones.",
+  "options": [
+   "allez",
+   "alliez",
+   "irez",
+   "iriez"
+  ],
+  "answer": 1,
+  "explanation": "Où que + subjonctif."
+ },
+ {
+  "id": "g133",
+  "topic": "subj_verbes",
+  "level": "C2",
+  "prompt": "Quelles que ___ vos raisons, la décision est irrévocable.",
+  "options": [
+   "sont",
+   "soient",
+   "seraient",
+   "seront"
+  ],
+  "answer": 1,
+  "explanation": "Quel que + être au subjonctif, accordé avec le sujet : quelles que soient."
+ },
+ {
+  "id": "g134",
+  "topic": "subj_verbes",
+  "level": "C1",
+  "prompt": "Il est évident qu'il ___ raison.",
+  "options": [
+   "ait",
+   "a",
+   "aurait eu",
+   "eût"
+  ],
+  "answer": 1,
+  "explanation": "Il est évident que exprime une certitude : indicatif."
+ },
+ {
+  "id": "g135",
+  "topic": "subj_verbes",
+  "level": "C1",
+  "prompt": "Il n'est pas certain que le projet ___ financé.",
+  "options": [
+   "sera",
+   "soit",
+   "est",
+   "serait"
+  ],
+  "answer": 1,
+  "explanation": "La certitude niée appelle le subjonctif."
+ },
+ {
+  "id": "g136",
+  "topic": "concordance",
+  "level": "C1",
+  "prompt": "Elle m'a dit qu'elle ___ le dossier la veille.",
+  "options": [
+   "a déposé",
+   "avait déposé",
+   "déposerait",
+   "dépose"
+  ],
+  "answer": 1,
+  "explanation": "Antériorité dans le passé : plus-que-parfait."
+ },
+ {
+  "id": "g137",
+  "topic": "concordance",
+  "level": "C2",
+  "prompt": "On m'avait assuré que les travaux ___ achevés avant la rentrée.",
+  "options": [
+   "seront",
+   "seraient",
+   "auraient été",
+   "sont"
+  ],
+  "answer": 2,
+  "explanation": "Action future accomplie vue du passé : conditionnel passé."
+ },
+ {
+  "id": "g138",
+  "topic": "discours_indirect",
+  "level": "C1",
+  "prompt": "« Où as-tu mis les plans ? » → Il m'a demandé où j'___ les plans.",
+  "options": [
+   "ai mis",
+   "avais mis",
+   "aurai mis",
+   "mettais"
+  ],
+  "answer": 1,
+  "explanation": "Concordance au discours indirect passé : le passé composé devient plus-que-parfait."
+ },
+ {
+  "id": "g139",
+  "topic": "discours_indirect",
+  "level": "C1",
+  "prompt": "« Je l'ai fait hier. » → Il a affirmé qu'il l'avait fait ___.",
+  "options": [
+   "hier",
+   "la veille",
+   "le lendemain",
+   "ce jour"
+  ],
+  "answer": 1,
+  "explanation": "Hier devient la veille."
+ },
+ {
+  "id": "g140",
+  "topic": "relatifs",
+  "level": "C1",
+  "prompt": "C'est un outil sans ___ je ne pourrais pas travailler.",
+  "options": [
+   "quoi",
+   "lequel",
+   "que",
+   "dont"
+  ],
+  "answer": 1,
+  "explanation": "Sans + chose masculine : sans lequel."
+ },
+ {
+  "id": "g141",
+  "topic": "relatifs",
+  "level": "C2",
+  "prompt": "Les raisons pour ___ il a démissionné restent obscures.",
+  "options": [
+   "quoi",
+   "lesquelles",
+   "dont",
+   "qu'"
+  ],
+  "answer": 1,
+  "explanation": "Pour + raisons (féminin pluriel) : pour lesquelles."
+ },
+ {
+  "id": "g142",
+  "topic": "relatifs",
+  "level": "C1",
+  "prompt": "Voilà le collègue ___ je travaille depuis deux ans.",
+  "options": [
+   "que",
+   "dont",
+   "avec qui",
+   "lequel"
+  ],
+  "answer": 2,
+  "explanation": "Travailler avec quelqu'un : avec qui."
+ },
+ {
+  "id": "g143",
+  "topic": "relatifs",
+  "level": "C2",
+  "prompt": "Il a dit quelque chose à ___ personne ne s'attendait.",
+  "options": [
+   "quoi",
+   "qui",
+   "laquelle",
+   "lequel"
+  ],
+  "answer": 0,
+  "explanation": "Après quelque chose, rien, ce : préposition + quoi."
+ },
+ {
+  "id": "g144",
+  "topic": "pronoms_y_en",
+  "level": "C1",
+  "prompt": "Tu iras à Grenoble ? Oui, j'___ irai en septembre.",
+  "options": [
+   "en",
+   "y",
+   "le",
+   "lui"
+  ],
+  "answer": 1,
+  "explanation": "Aller à + lieu : y. On dit j'y irai."
+ },
+ {
+  "id": "g145",
+  "topic": "pronoms_y_en",
+  "level": "C1",
+  "prompt": "Il m'a parlé de son projet et je ___ ai parlé du mien.",
+  "options": [
+   "lui",
+   "leur",
+   "y",
+   "en"
+  ],
+  "answer": 0,
+  "explanation": "Parler à quelqu'un (singulier) : lui."
+ },
+ {
+  "id": "g146",
+  "topic": "accord_pp",
+  "level": "C1",
+  "prompt": "La lettre que je vous ai ___ est importante.",
+  "options": [
+   "envoyé",
+   "envoyée",
+   "envoyés",
+   "envoyer"
+  ],
+  "answer": 1,
+  "explanation": "COD que (la lettre) placé avant : accord au féminin."
+ },
+ {
+  "id": "g147",
+  "topic": "accord_pp",
+  "level": "C2",
+  "prompt": "Ils se sont ___ des cadeaux.",
+  "options": [
+   "offerts",
+   "offert",
+   "offertes",
+   "offrir"
+  ],
+  "answer": 1,
+  "explanation": "Le COD (des cadeaux) est après le verbe : pas d'accord."
+ },
+ {
+  "id": "g148",
+  "topic": "accord_pp",
+  "level": "C2",
+  "prompt": "Les heures qu'il a ___ à réviser ont porté leurs fruits.",
+  "options": [
+   "passé",
+   "passées",
+   "passés",
+   "passée"
+  ],
+  "answer": 1,
+  "explanation": "Passer des heures : COD placé avant, accord."
+ },
+ {
+  "id": "g149",
+  "topic": "accord_pp",
+  "level": "C2",
+  "prompt": "Les vingt minutes que la réunion a ___ m'ont paru longues.",
+  "options": [
+   "duré",
+   "durées",
+   "durés",
+   "durée"
+  ],
+  "answer": 0,
+  "explanation": "Durer n'a pas de COD (complément de durée) : invariable."
+ },
+ {
+  "id": "g150",
+  "topic": "connecteurs",
+  "level": "C1",
+  "prompt": "Il est très compétent ; ___, il manque d'expérience sur les grands projets.",
+  "options": [
+   "cependant",
+   "donc",
+   "ainsi",
+   "car"
+  ],
+  "answer": 0,
+  "explanation": "Cependant marque l'opposition."
+ },
+ {
+  "id": "g151",
+  "topic": "connecteurs",
+  "level": "C2",
+  "prompt": "Il a réussi ___ de nombreuses heures de travail.",
+  "options": [
+   "à force",
+   "au prix",
+   "à cause",
+   "en dépit"
+  ],
+  "answer": 1,
+  "explanation": "Au prix de : grâce à un effort coûteux."
+ },
+ {
+  "id": "g152",
+  "topic": "connecteurs",
+  "level": "C2",
+  "prompt": "Tous les calculs étaient justes ; ___, la structure s'est fissurée.",
+  "options": [
+   "or",
+   "encore que",
+   "aussi",
+   "dès lors"
+  ],
+  "answer": 0,
+  "explanation": "Or introduit un fait qui contredit ce qu'on attendait. Encore que exigerait le subjonctif, aussi et dès lors marquent la conséquence."
+ },
+ {
+  "id": "g153",
+  "topic": "connecteurs",
+  "level": "C1",
+  "prompt": "Il ne viendra pas, ___ il est malade.",
+  "options": [
+   "car",
+   "pour que",
+   "bien que",
+   "afin que"
+  ],
+  "answer": 0,
+  "explanation": "Car introduit une explication, avec l'indicatif."
+ },
+ {
+  "id": "g154",
+  "topic": "hypothese",
+  "level": "C1",
+  "prompt": "Même si tu ___ en avance, attends-moi devant l'entrée.",
+  "options": [
+   "arriverais",
+   "arrives",
+   "arrivais",
+   "arrives-tu"
+  ],
+  "answer": 1,
+  "explanation": "Même si + présent (jamais de conditionnel)."
+ },
+ {
+  "id": "g155",
+  "topic": "hypothese",
+  "level": "C2",
+  "prompt": "N'eût été son intervention, le projet aurait été abandonné. Cette phrase signifie :",
+  "options": [
+   "Grâce à son intervention, le projet a continué",
+   "Son intervention a fait échouer le projet",
+   "Il n'est pas intervenu",
+   "Le projet a été abandonné"
+  ],
+  "answer": 0,
+  "explanation": "N'eût été : sans. Sans son intervention, le projet aurait été abandonné."
+ },
+ {
+  "id": "g156",
+  "topic": "prepositions",
+  "level": "C1",
+  "prompt": "Il s'est souvenu ___ son rendez-vous au dernier moment.",
+  "options": [
+   "∅ (rien)",
+   "de",
+   "à",
+   "sur"
+  ],
+  "answer": 1,
+  "explanation": "Se souvenir de."
+ },
+ {
+  "id": "g157",
+  "topic": "prepositions",
+  "level": "C2",
+  "prompt": "Ce rapport fait état ___ graves malfaçons.",
+  "options": [
+   "à",
+   "de",
+   "des",
+   "sur"
+  ],
+  "answer": 2,
+  "explanation": "Faire état de + des = des (de + les)."
+ },
+ {
+  "id": "g158",
+  "topic": "participe_gerondif",
+  "level": "C2",
+  "prompt": "C'est un enfant très ___.",
+  "options": [
+   "provoquant",
+   "provocant",
+   "provocants",
+   "provoquants"
+  ],
+  "answer": 1,
+  "explanation": "Adjectif verbal : provocant (c). Participe : provoquant."
+ },
+ {
+  "id": "g159",
+  "topic": "paronymes",
+  "level": "C2",
+  "prompt": "Par sa sobriété, ce bâtiment ___ des immeubles voisins.",
+  "options": [
+   "se démarque",
+   "démarque",
+   "se démarquerait de",
+   "démarqué"
+  ],
+  "answer": 0,
+  "explanation": "Se démarquer de : se distinguer de. C'est un verbe pronominal."
+ },
+ {
+  "id": "g160",
+  "topic": "paronymes",
+  "level": "C2",
+  "prompt": "Le ministre a ___ le décret hier.",
+  "options": [
+   "promulgué",
+   "promulgé",
+   "promu",
+   "promut"
+  ],
+  "answer": 0,
+  "explanation": "Promulguer un texte de loi."
+ },
+ {
+  "id": "g161",
+  "topic": "registres",
+  "level": "C2",
+  "prompt": "Quel connecteur appartient au registre le plus soutenu ?",
+  "options": [
+   "mais",
+   "cependant",
+   "nonobstant",
+   "pourtant"
+  ],
+  "answer": 2,
+  "explanation": "Nonobstant est juridique et très soutenu."
+ },
+ {
+  "id": "g162",
+  "topic": "mise_en_relief",
+  "level": "C1",
+  "prompt": "C'est à elle ___ il faut s'adresser.",
+  "options": [
+   "qu'",
+   "qui",
+   "dont",
+   "à qui"
+  ],
+  "answer": 0,
+  "explanation": "C'est à elle que : la préposition est déjà portée par à elle."
  }
 ]

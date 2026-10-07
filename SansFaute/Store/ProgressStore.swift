@@ -11,6 +11,17 @@ struct AppState: Codable {
     var examDate: Date = DayKey.date("2026-11-09") ?? Date()
     var speechRate: Double = 0.9
 
+    // Added in 1.1
+    var studySeconds: [String: Int] = [:]
+    var favorites: [String] = []
+    var customCards: [VocabCard] = []
+    var sprintBest: Int = 0
+    var dictationBest: [String: Double] = [:]
+    var reminderOn: Bool = false
+    var reminderHour: Int = 19
+    var reminderMinute: Int = 0
+    var checklist: [String] = []
+
     init() {}
 
     // Tolerant decoding so adding fields in a future version never wipes progress.
@@ -25,6 +36,15 @@ struct AppState: Codable {
         studyDays = (try? c.decodeIfPresent([String].self, forKey: .studyDays)) ?? []
         examDate = (try? c.decodeIfPresent(Date.self, forKey: .examDate)) ?? (DayKey.date("2026-11-09") ?? Date())
         speechRate = (try? c.decodeIfPresent(Double.self, forKey: .speechRate)) ?? 0.9
+        studySeconds = (try? c.decodeIfPresent([String: Int].self, forKey: .studySeconds)) ?? [:]
+        favorites = (try? c.decodeIfPresent([String].self, forKey: .favorites)) ?? []
+        customCards = (try? c.decodeIfPresent([VocabCard].self, forKey: .customCards)) ?? []
+        sprintBest = (try? c.decodeIfPresent(Int.self, forKey: .sprintBest)) ?? 0
+        dictationBest = (try? c.decodeIfPresent([String: Double].self, forKey: .dictationBest)) ?? [:]
+        reminderOn = (try? c.decodeIfPresent(Bool.self, forKey: .reminderOn)) ?? false
+        reminderHour = (try? c.decodeIfPresent(Int.self, forKey: .reminderHour)) ?? 19
+        reminderMinute = (try? c.decodeIfPresent(Int.self, forKey: .reminderMinute)) ?? 0
+        checklist = (try? c.decodeIfPresent([String].self, forKey: .checklist)) ?? []
     }
 }
 
@@ -56,13 +76,15 @@ final class ProgressStore: ObservableObject {
     func reset() {
         let exam = state.examDate
         let rate = state.speechRate
+        let custom = state.customCards
         var fresh = AppState()
         fresh.examDate = exam
         fresh.speechRate = rate
+        fresh.customCards = custom
         state = fresh
     }
 
-    // MARK: - Days and streak
+    // MARK: - Days, time and streak
 
     var daysUntilExam: Int {
         let cal = Calendar.current
@@ -75,6 +97,19 @@ final class ProgressStore: ObservableObject {
         let today = DayKey.string(Date())
         if !state.studyDays.contains(today) { state.studyDays.append(today) }
     }
+
+    func addStudy(seconds: Int) {
+        guard seconds > 5 else { return }
+        let capped = min(seconds, 3 * 3600)
+        state.studySeconds[DayKey.string(Date()), default: 0] += capped
+        markStudied()
+    }
+
+    func minutes(on date: Date) -> Int {
+        (state.studySeconds[DayKey.string(date)] ?? 0) / 60
+    }
+
+    var totalMinutes: Int { state.studySeconds.values.reduce(0, +) / 60 }
 
     var streak: Int {
         let days = Set(state.studyDays)
@@ -109,6 +144,17 @@ final class ProgressStore: ObservableObject {
         state.doneTasks[day] = list
     }
 
+    func setDone(day: String, index: Int) {
+        if !isDone(day: day, index: index) { toggle(day: day, index: index) }
+    }
+
+    func doneRatio(for day: PlanDay) -> Double {
+        let countable = day.tasks.indices.filter { day.tasks[$0].minutes > 0 }
+        guard !countable.isEmpty else { return 0 }
+        let done = countable.filter { isDone(day: day.date, index: $0) }.count
+        return Double(done) / Double(countable.count)
+    }
+
     // MARK: - Answers
 
     func record(_ question: Question, correct: Bool) {
@@ -139,19 +185,28 @@ final class ProgressStore: ObservableObject {
     /// Average estimate per skill over the last few tests.
     func recentEstimate(_ skill: Skill, last n: Int = 5) -> Int? {
         let relevant = state.results.filter { $0.kind != "Entraînement" }.suffix(n)
-        let scores = relevant.compactMap { r -> SkillScore? in
-            guard let s = r.bySkill[skill.rawValue], s.total > 0 else { return nil }
-            return s
+        var correct = 0
+        var total = 0
+        for r in relevant {
+            if let s = r.bySkill[skill.rawValue] {
+                correct += s.correct
+                total += s.total
+            }
         }
-        guard !scores.isEmpty else { return nil }
-        let correct = scores.reduce(0) { $0 + $1.correct }
-        let total = scores.reduce(0) { $0 + $1.total }
         guard total > 0 else { return nil }
         let accuracy = Double(correct) / Double(total)
-        return min(699, max(100, Int((250.0 + 449.0 * accuracy * 1.0).rounded())))
+        return min(699, max(100, Int((250.0 + 449.0 * accuracy).rounded())))
+    }
+
+    var latestEstimate: Int? {
+        state.results.last { $0.kind != "Entraînement" }?.estimate
     }
 
     // MARK: - Flashcards (Leitner boxes)
+
+    func allCards(_ content: ContentStore) -> [VocabCard] {
+        content.vocab + state.customCards
+    }
 
     func dueCards(from all: [VocabCard], today: Date = Date()) -> [VocabCard] {
         let key = DayKey.string(today)
@@ -165,12 +220,18 @@ final class ProgressStore: ObservableObject {
         let key = DayKey.string(today)
         let used = state.newCardsByDay[key, default: 0]
         let remaining = max(0, ProgressStore.newCardsPerDay - used)
-        return Array(all.filter { state.cards[$0.id] == nil }.prefix(remaining))
+        // Your own words come first.
+        let unseen = all.filter { state.cards[$0.id] == nil }
+        let mine = unseen.filter { $0.id.hasPrefix("u-") }
+        let others = unseen.filter { !$0.id.hasPrefix("u-") }
+        return Array((mine + others).prefix(remaining))
     }
 
     func knownCount(from all: [VocabCard]) -> Int {
         all.filter { (state.cards[$0.id]?.box ?? 0) >= 3 }.count
     }
+
+    func box(of card: VocabCard) -> Int { state.cards[card.id]?.box ?? -1 }
 
     func grade(_ card: VocabCard, knew: Bool, today: Date = Date()) {
         let key = DayKey.string(today)
@@ -184,5 +245,35 @@ final class ProgressStore: ObservableObject {
         s.due = DayKey.string(due)
         state.cards[card.id] = s
         markStudied()
+    }
+
+    func isFavorite(_ card: VocabCard) -> Bool { state.favorites.contains(card.id) }
+
+    func toggleFavorite(_ card: VocabCard) {
+        if let i = state.favorites.firstIndex(of: card.id) {
+            state.favorites.remove(at: i)
+        } else {
+            state.favorites.append(card.id)
+        }
+    }
+
+    func addCustomCard(term: String, definition: String, example: String) {
+        let card = VocabCard(id: "u-\(UUID().uuidString.prefix(8))", term: term, definition: definition,
+                             example: example, category: "Mes mots", level: "C1")
+        state.customCards.append(card)
+    }
+
+    func deleteCustomCard(_ card: VocabCard) {
+        state.customCards.removeAll { $0.id == card.id }
+        state.cards.removeValue(forKey: card.id)
+        state.favorites.removeAll { $0 == card.id }
+    }
+
+    // MARK: - Checklist
+
+    func isChecked(_ item: String) -> Bool { state.checklist.contains(item) }
+
+    func toggleCheck(_ item: String) {
+        if let i = state.checklist.firstIndex(of: item) { state.checklist.remove(at: i) } else { state.checklist.append(item) }
     }
 }

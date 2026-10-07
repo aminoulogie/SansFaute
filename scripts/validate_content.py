@@ -26,6 +26,10 @@ def check_question(q, where):
 
 lessons = load("lessons"); grammar = load("grammar"); vocab = load("vocab")
 listening = load("listening"); reading = load("reading"); plan = load("plan")
+dictee = load("dictee")
+for d in dictee:
+    for k in ("id", "level", "focus", "text"):
+        if k not in d: errors.append(f"dictee: item missing '{k}'")
 
 ids = []
 lesson_ids = {l["id"] for l in lessons}
@@ -52,7 +56,7 @@ for d in plan:
         if ref and t["kind"] in refs and ref not in refs[t["kind"]]:
             errors.append(f"plan day {d['day']}: unknown {t['kind']} ref {ref}")
 
-print(f"lessons {len(lessons)} · grammar {len(grammar)} · vocab {len(vocab)} · listening {len(listening)} · reading {len(reading)} · plan days {len(plan)}")
+print(f"dictee {len(dictee)} · lessons {len(lessons)} · grammar {len(grammar)} · vocab {len(vocab)} · listening {len(listening)} · reading {len(reading)} · plan days {len(plan)}")
 if errors:
     print("\n".join(errors)); sys.exit(1)
 print("Content OK")

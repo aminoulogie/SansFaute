@@ -40,6 +40,7 @@ struct QuizView: View {
                 questionScreen
             }
         }
+        .paperBackground()
         .navigationTitle(title)
         .navigationBarTitleDisplayMode(.inline)
         .onDisappear { speaker.stop() }
@@ -47,12 +48,14 @@ struct QuizView: View {
 
     private var emptyState: some View {
         VStack(spacing: 12) {
-            Image(systemName: "checkmark.circle").font(.system(size: 44)).foregroundColor(Theme.good)
-            Text("Rien à revoir ici pour l'instant.").font(.headline)
-            Text("Les questions ratées apparaîtront ici automatiquement.").font(.subheadline).foregroundColor(.secondary)
+            Image(systemName: "checkmark.seal.fill").font(.system(size: 54)).foregroundColor(Theme.good)
+            Text("Rien à revoir").font(.serif(.title2, weight: .bold))
+            Text("Les questions ratées apparaîtront ici automatiquement, jusqu'à ce que tu les réussisses.")
+                .font(.subheadline).foregroundColor(Theme.muted)
         }
         .multilineTextAlignment(.center)
-        .padding()
+        .padding(30)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 
     private var current: QuizItem { items[min(index, items.count - 1)] }
@@ -68,8 +71,9 @@ struct QuizView: View {
                     PassagePanel(title: current.passageTitle, text: passage)
                 }
                 Text(current.question.prompt)
-                    .font(.title3.weight(.semibold))
+                    .font(.serif(.title3))
                     .fixedSize(horizontal: false, vertical: true)
+                    .padding(.top, 4)
                 VStack(spacing: 10) {
                     ForEach(Array(current.question.options.enumerated()), id: \.offset) { pair in
                         optionButton(index: pair.offset, text: pair.element)
@@ -77,31 +81,38 @@ struct QuizView: View {
                 }
                 if revealed && !examMode {
                     feedback
+                        .transition(.move(edge: .bottom).combined(with: .opacity))
                 }
                 nextButton
             }
-            .padding()
+            .padding(20)
         }
-        .background(Color(.systemGroupedBackground))
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            ProgressView(value: Double(index), total: Double(items.count))
-            HStack {
-                Text("Question \(index + 1) / \(items.count)")
-                    .font(.caption.monospacedDigit())
-                    .foregroundColor(.secondary)
-                Image(systemName: Skill.of(current.question).symbol)
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 4) {
+                ForEach(items.indices, id: \.self) { i in
+                    Capsule()
+                        .fill(segmentColor(i))
+                        .frame(height: 5)
+                }
+            }
+            .frame(height: 5)
+            HStack(spacing: 8) {
+                Text("\(index + 1) / \(items.count)")
+                    .font(.number(13, weight: .semibold))
+                    .foregroundColor(Theme.muted)
+                Label(Skill.of(current.question).shortTitle, systemImage: Skill.of(current.question).symbol)
                     .font(.caption)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(Theme.muted)
                 Spacer()
                 if examMode {
                     TimelineView(.periodic(from: startDate, by: 1)) { context in
                         let s = Int(context.date.timeIntervalSince(startDate))
-                        Text(String(format: "%d:%02d", s / 60, s % 60))
+                        Label(String(format: "%d:%02d", s / 60, s % 60), systemImage: "timer")
                             .font(.caption.monospacedDigit())
-                            .foregroundColor(.secondary)
+                            .foregroundColor(Theme.muted)
                     }
                 }
                 LevelBadge(level: current.question.level)
@@ -109,59 +120,82 @@ struct QuizView: View {
         }
     }
 
+    private func segmentColor(_ i: Int) -> Color {
+        if i == index { return Theme.ink }
+        if i > index { return Theme.inkSoft }
+        if examMode { return Theme.ink.opacity(0.45) }
+        let item = items[i]
+        guard let a = answers[item.id] else { return Theme.inkSoft }
+        return a == item.question.answer ? Theme.good : Theme.pen
+    }
+
     private func optionButton(index i: Int, text: String) -> some View {
         let isSelected = selected == i
         let isAnswer = current.question.answer == i
-        var fill = Color(.secondarySystemGroupedBackground)
-        var stroke = Color.clear
-        var symbol = "circle"
+        let letter = ["A", "B", "C", "D", "E", "F"][min(i, 5)]
+        var fill = Theme.card
+        var stroke = Theme.stroke
+        var badgeFill = Theme.inkSoft
+        var badgeText = Theme.ink
+        var symbol: String? = nil
         if revealed && !examMode {
-            if isAnswer { fill = Theme.good.opacity(0.15); stroke = Theme.good; symbol = "checkmark.circle.fill" }
-            else if isSelected { fill = Theme.pen.opacity(0.12); stroke = Theme.pen; symbol = "xmark.circle.fill" }
+            if isAnswer {
+                fill = Theme.goodSoft; stroke = Theme.good; badgeFill = Theme.good; badgeText = .white; symbol = "checkmark"
+            } else if isSelected {
+                fill = Theme.penSoft; stroke = Theme.pen; badgeFill = Theme.pen; badgeText = .white; symbol = "xmark"
+            }
         } else if isSelected {
-            fill = Theme.ink.opacity(0.12); stroke = Theme.ink; symbol = "largecircle.fill.circle"
+            fill = Theme.inkSoft; stroke = Theme.ink; badgeFill = Theme.ink; badgeText = .white
         }
         return Button {
             choose(i)
         } label: {
-            HStack(alignment: .top, spacing: 10) {
-                Image(systemName: symbol)
-                    .foregroundColor(stroke == .clear ? .secondary : stroke)
+            HStack(alignment: .center, spacing: 12) {
+                ZStack {
+                    Circle().fill(badgeFill).frame(width: 30, height: 30)
+                    if let s = symbol {
+                        Image(systemName: s).font(.caption.weight(.heavy)).foregroundColor(badgeText)
+                    } else {
+                        Text(letter).font(.system(size: 13, weight: .bold, design: .rounded)).foregroundColor(badgeText)
+                    }
+                }
                 Text(text)
+                    .font(.body)
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.leading)
                     .fixedSize(horizontal: false, vertical: true)
                 Spacer(minLength: 0)
             }
             .padding(12)
-            .background(fill, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
-            .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(stroke, lineWidth: 1.5))
+            .background(fill, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(stroke, lineWidth: isSelected || (revealed && isAnswer) ? 1.8 : 0.8))
         }
-        .buttonStyle(.plain)
+        .buttonStyle(PressableStyle())
         .disabled(revealed && !examMode)
     }
 
     private var feedback: some View {
         let correct = selected == current.question.answer
-        return VStack(alignment: .leading, spacing: 8) {
-            Label(correct ? "Juste" : "Faux", systemImage: correct ? "checkmark.seal.fill" : "pencil.and.outline")
-                .font(.headline)
-                .foregroundColor(correct ? Theme.good : Theme.pen)
+        return VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 8) {
+                Image(systemName: correct ? "checkmark.seal.fill" : "pencil.and.outline")
+                Text(correct ? "Juste" : "Faux").font(.serif(.headline, weight: .bold))
+            }
+            .foregroundColor(correct ? Theme.good : Theme.pen)
             Text(current.question.explanation)
                 .fixedSize(horizontal: false, vertical: true)
             if let segments = current.segments {
                 DisclosureGroup("Transcription", isExpanded: $showTranscript) {
                     Text(ListeningItem(id: "", title: "", level: "", kind: "", segments: segments, questions: []).transcript)
-                        .font(.callout)
-                        .foregroundColor(.secondary)
-                        .padding(.top, 4)
+                        .font(.system(.callout, design: .serif))
+                        .foregroundColor(Theme.muted)
+                        .padding(.top, 6)
                         .fixedSize(horizontal: false, vertical: true)
                 }
+                .tint(Theme.ink)
             }
         }
-        .padding(14)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+        .card(fill: correct ? Theme.goodSoft : Theme.penSoft)
     }
 
     private var nextButton: some View {
@@ -169,12 +203,10 @@ struct QuizView: View {
         return Button {
             next()
         } label: {
-            Text(last ? "Voir le résultat" : "Suivant")
-                .font(.headline)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 6)
+            Label(last ? "Voir le résultat" : "Suivant", systemImage: last ? "flag.checkered" : "arrow.right")
         }
-        .buttonStyle(.borderedProminent)
+        .buttonStyle(InkButtonStyle())
+        .opacity((examMode ? selected == nil : !revealed) ? 0.4 : 1)
         .disabled(examMode ? selected == nil : !revealed)
         .padding(.top, 4)
     }
@@ -183,12 +215,15 @@ struct QuizView: View {
 
     private func choose(_ i: Int) {
         if examMode {
+            Haptics.tap()
             selected = i
         } else if !revealed {
             selected = i
-            revealed = true
+            let ok = i == current.question.answer
+            ok ? Haptics.success() : Haptics.error()
+            withAnimation(.easeOut(duration: 0.25)) { revealed = true }
             answers[current.id] = i
-            progress.record(current.question, correct: i == current.question.answer)
+            progress.record(current.question, correct: ok)
         }
     }
 
@@ -227,7 +262,9 @@ struct QuizView: View {
         let r = TestResult(date: Date(), kind: kind, correct: correct, total: items.count,
                            estimate: Level.estimate(graded), bySkill: bySkill)
         if saveResult { progress.save(result: r) }
-        result = r
+        progress.addStudy(seconds: Int(Date().timeIntervalSince(startDate)))
+        correct == items.count ? Haptics.success() : Haptics.tap()
+        withAnimation { result = r }
     }
 }
 
@@ -246,17 +283,7 @@ struct AudioPanel: View {
     private var locked: Bool { examMode && alreadyPlayed && !speaker.isSpeaking }
 
     var body: some View {
-        HStack(spacing: 12) {
-            Image(systemName: speaker.isSpeaking ? "waveform" : "ear")
-                .font(.title2)
-                .foregroundColor(Theme.ink)
-                .frame(width: 32)
-            VStack(alignment: .leading, spacing: 2) {
-                Text(examMode ? "Une seule écoute" : "Document audio").font(.subheadline.weight(.semibold))
-                Text(examMode ? "Comme au TCF. Lis les réponses avant de lancer." : "Réécoute autant que nécessaire.")
-                    .font(.caption).foregroundColor(.secondary)
-            }
-            Spacer()
+        HStack(spacing: 14) {
             Button {
                 if speaker.isSpeaking {
                     speaker.stop()
@@ -265,14 +292,43 @@ struct AudioPanel: View {
                     speaker.speak(segments, rate: progress.state.speechRate)
                 }
             } label: {
-                Image(systemName: speaker.isSpeaking ? "stop.fill" : (locked ? "lock.fill" : "play.fill"))
-                    .frame(width: 22, height: 22)
+                ZStack {
+                    Circle().fill(locked ? Theme.muted.opacity(0.3) : Theme.ink).frame(width: 56, height: 56)
+                    Image(systemName: speaker.isSpeaking ? "stop.fill" : (locked ? "lock.fill" : "play.fill"))
+                        .font(.title3.weight(.bold))
+                        .foregroundColor(.white)
+                }
             }
-            .buttonStyle(.borderedProminent)
+            .buttonStyle(PressableStyle())
             .disabled(locked)
+
+            VStack(alignment: .leading, spacing: 4) {
+                Text(speaker.isSpeaking ? "Écoute en cours…" : (locked ? "Document déjà écouté" : "Document audio"))
+                    .font(.subheadline.weight(.semibold))
+                Text(examMode ? "Une seule écoute, comme au TCF. Lis les réponses d'abord." : "Réécoute autant que tu veux.")
+                    .font(.caption).foregroundColor(Theme.muted)
+                if speaker.isSpeaking {
+                    WaveBars().frame(height: 14)
+                }
+            }
+            Spacer(minLength: 0)
         }
-        .padding(14)
-        .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+        .card(padding: 14, fill: Theme.cardRaised)
+    }
+}
+
+struct WaveBars: View {
+    var body: some View {
+        TimelineView(.animation) { ctx in
+            let t = ctx.date.timeIntervalSinceReferenceDate
+            HStack(alignment: .center, spacing: 3) {
+                ForEach(0..<14, id: \.self) { i in
+                    Capsule()
+                        .fill(Theme.ink.opacity(0.7))
+                        .frame(width: 3, height: 4 + 10 * abs(sin(t * 5 + Double(i) * 0.6)))
+                }
+            }
+        }
     }
 }
 
@@ -282,7 +338,7 @@ struct PassagePanel: View {
     @State private var expanded = true
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: 10) {
             Button {
                 withAnimation { expanded.toggle() }
             } label: {
@@ -290,20 +346,19 @@ struct PassagePanel: View {
                     Image(systemName: "doc.text").foregroundColor(Theme.ink)
                     Text(title ?? "Document").font(.subheadline.weight(.semibold)).foregroundColor(.primary)
                     Spacer()
-                    Image(systemName: expanded ? "chevron.up" : "chevron.down").foregroundColor(.secondary)
+                    Image(systemName: expanded ? "chevron.up" : "chevron.down").foregroundColor(Theme.muted)
                 }
             }
             .buttonStyle(.plain)
             if expanded {
                 Text(text)
-                    .font(.body)
-                    .lineSpacing(3)
+                    .font(.system(.body, design: .serif))
+                    .lineSpacing(4)
                     .fixedSize(horizontal: false, vertical: true)
                     .textSelection(.enabled)
             }
         }
-        .padding(14)
-        .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+        .card(fill: Theme.cardRaised)
     }
 }
 
@@ -314,63 +369,74 @@ struct QuizSummaryView: View {
     @Environment(\.dismiss) private var dismiss
 
     private var wrong: [QuizItem] { items.filter { answers[$0.id] != $0.question.answer } }
+    private var ratio: Double { result.total == 0 ? 0 : Double(result.correct) / Double(result.total) }
 
     var body: some View {
-        List {
-            Section {
-                VStack(spacing: 6) {
-                    Text("\(result.correct) / \(result.total)")
-                        .font(.system(size: 44, weight: .bold, design: .rounded).monospacedDigit())
-                    HStack(spacing: 6) {
-                        Text("Score estimé").foregroundColor(.secondary)
-                        Text("\(result.estimate)").fontWeight(.semibold).foregroundColor(Theme.scoreColor(result.estimate))
+        ScrollView {
+            VStack(alignment: .leading, spacing: 16) {
+                VStack(spacing: 10) {
+                    ZStack {
+                        ProgressRing(progress: ratio, lineWidth: 12, color: Theme.ratioColor(ratio))
+                        VStack(spacing: 0) {
+                            Text("\(result.correct)").font(.number(44))
+                            Text("sur \(result.total)").font(.caption).foregroundColor(Theme.muted)
+                        }
+                    }
+                    .frame(width: 150, height: 150)
+                    HStack(spacing: 8) {
+                        Text("Score estimé").foregroundColor(Theme.muted)
+                        Text("\(result.estimate)").font(.number(20)).foregroundColor(Theme.scoreColor(result.estimate))
                         LevelBadge(level: Level.cefr(result.estimate))
                     }
-                    .font(.subheadline)
                     Text("Estimation indicative sur 699, pondérée par le niveau des questions.")
-                        .font(.caption2).foregroundColor(.secondary).multilineTextAlignment(.center)
+                        .font(.caption2).foregroundColor(Theme.muted).multilineTextAlignment(.center)
                 }
                 .frame(maxWidth: .infinity)
-                .padding(.vertical, 8)
-            }
-            Section("Par compétence") {
-                ForEach(Skill.allCases, id: \.self) { skill in
-                    if let s = result.bySkill[skill.rawValue], s.total > 0 {
-                        HStack {
-                            Label(skill.title, systemImage: skill.symbol)
-                            Spacer()
-                            Text("\(s.correct)/\(s.total)").monospacedDigit()
-                                .foregroundColor(s.ratio >= 0.8 ? Theme.good : (s.ratio >= 0.6 ? Theme.warn : Theme.pen))
-                        }
-                    }
-                }
-            }
-            if !wrong.isEmpty {
-                Section("À retenir (\(wrong.count))") {
-                    ForEach(wrong) { item in
-                        VStack(alignment: .leading, spacing: 6) {
-                            Text(item.question.prompt).font(.subheadline.weight(.semibold))
-                            if let a = answers[item.id], a < item.question.options.count {
-                                Text("Ta réponse : \(item.question.options[a])").font(.caption).foregroundColor(Theme.pen)
-                            } else {
-                                Text("Sans réponse").font(.caption).foregroundColor(Theme.pen)
+                .card(padding: 20)
+
+                VStack(spacing: 12) {
+                    ForEach(Skill.allCases, id: \.self) { skill in
+                        if let s = result.bySkill[skill.rawValue], s.total > 0 {
+                            HStack {
+                                Label(skill.title, systemImage: skill.symbol).font(.subheadline)
+                                Spacer()
+                                Text("\(s.correct)/\(s.total)").font(.number(15)).foregroundColor(Theme.ratioColor(s.ratio))
                             }
-                            Text("Bonne réponse : \(item.question.options[item.question.answer])")
-                                .font(.caption).foregroundColor(Theme.good)
-                            Text(item.question.explanation).font(.caption).foregroundColor(.secondary)
                         }
-                        .padding(.vertical, 4)
                     }
                 }
-            } else {
-                Section {
-                    Label("Sans faute. Bravo.", systemImage: "star.fill").foregroundColor(Theme.good)
+                .card()
+
+                if wrong.isEmpty {
+                    Label("Sans faute. Bravo.", systemImage: "star.fill")
+                        .font(.serif(.title3, weight: .bold))
+                        .foregroundColor(Theme.good)
+                        .card(fill: Theme.goodSoft)
+                } else {
+                    SectionHeader(eyebrow: "\(wrong.count) à retenir", title: "La correction")
+                    ForEach(wrong) { item in
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text(item.question.prompt).font(.subheadline.weight(.semibold))
+                                .fixedSize(horizontal: false, vertical: true)
+                            if let a = answers[item.id], a < item.question.options.count {
+                                Label(item.question.options[a], systemImage: "xmark").font(.subheadline).foregroundColor(Theme.pen)
+                            } else {
+                                Label("Sans réponse", systemImage: "minus").font(.subheadline).foregroundColor(Theme.pen)
+                            }
+                            Label(item.question.options[item.question.answer], systemImage: "checkmark")
+                                .font(.subheadline.weight(.semibold)).foregroundColor(Theme.good)
+                            Text(item.question.explanation).font(.caption).foregroundColor(Theme.muted)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                        .card(padding: 14)
+                    }
                 }
-            }
-            Section {
+
                 Button("Terminer") { dismiss() }
-                    .frame(maxWidth: .infinity)
+                    .buttonStyle(InkButtonStyle())
             }
+            .padding(20)
         }
+        .overlay { if wrong.isEmpty { Confetti() } }
     }
 }

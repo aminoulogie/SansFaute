@@ -11,24 +11,29 @@ struct PlanView: View {
     }
 
     var body: some View {
-        List {
-            Section {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 14) {
                 Text("1 heure par jour : 20 min d'écoute, 15 min de grammaire, 10 min de vocabulaire, 15 min de test. Le samedi, un test blanc. Les derniers jours restent légers pour arriver reposé.")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-            }
-            ForEach(phases, id: \.self) { phase in
-                Section(phase) {
-                    ForEach(content.plan.filter { $0.phase == phase }) { day in
-                        NavigationLink {
-                            DayDetailView(day: day)
-                        } label: {
-                            DayRow(day: day)
+                    .font(.subheadline).foregroundColor(Theme.muted)
+                    .card()
+                ForEach(phases, id: \.self) { phase in
+                    let parts = phase.components(separatedBy: " · ")
+                    SectionHeader(eyebrow: parts.first ?? "", title: parts.count > 1 ? parts[1] : phase)
+                    VStack(spacing: 8) {
+                        ForEach(content.plan.filter { $0.phase == phase }) { day in
+                            NavigationLink {
+                                DayDetailView(day: day)
+                            } label: {
+                                DayRow(day: day)
+                            }
+                            .buttonStyle(PressableStyle())
                         }
                     }
                 }
             }
+            .padding(20)
         }
+        .paperBackground()
         .navigationTitle("Programme")
         .navigationBarTitleDisplayMode(.inline)
     }
@@ -38,34 +43,36 @@ struct DayRow: View {
     let day: PlanDay
     @EnvironmentObject private var progress: ProgressStore
 
-    private var doneCount: Int {
-        day.tasks.indices.filter { progress.isDone(day: day.date, index: $0) }.count
-    }
-
     private var isToday: Bool { day.date == DayKey.string(Date()) }
+    private var isPast: Bool { day.date < DayKey.string(Date()) }
 
     var body: some View {
-        HStack(spacing: 12) {
-            VStack(alignment: .leading, spacing: 2) {
-                Text(dateLabel).fontWeight(isToday ? .bold : .regular)
-                Text(day.tasks.first?.label ?? "").font(.caption).foregroundColor(.secondary).lineLimit(1)
+        let ratio = progress.doneRatio(for: day)
+        let d = DayKey.date(day.date) ?? Date()
+        HStack(spacing: 14) {
+            VStack(spacing: 0) {
+                Text(d.formatted(.dateTime.weekday(.abbreviated).locale(FR.locale)).uppercased())
+                    .font(.system(size: 10, weight: .bold)).foregroundColor(isToday ? .white : Theme.muted)
+                Text(d.formatted(.dateTime.day()))
+                    .font(.number(20)).foregroundColor(isToday ? .white : .primary)
             }
-            Spacer()
-            if isToday {
-                Text("Aujourd'hui").font(.caption2.weight(.bold)).foregroundColor(.white)
-                    .padding(.horizontal, 6).padding(.vertical, 2)
-                    .background(Theme.ink, in: Capsule())
+            .frame(width: 46, height: 46)
+            .background(isToday ? Theme.ink : Theme.inkSoft.opacity(0.6), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+            VStack(alignment: .leading, spacing: 3) {
+                Text("Jour \(day.day)").font(.subheadline.weight(.semibold)).foregroundColor(.primary)
+                Text(day.tasks.first?.label ?? "").font(.caption).foregroundColor(Theme.muted).lineLimit(1)
             }
-            Text("\(doneCount)/\(day.tasks.count)")
-                .font(.caption.monospacedDigit())
-                .foregroundColor(doneCount == day.tasks.count ? Theme.good : .secondary)
+            Spacer(minLength: 0)
+            ZStack {
+                ProgressRing(progress: ratio, lineWidth: 4, color: ratio >= 1 ? Theme.good : Theme.ink)
+                if ratio >= 1 {
+                    Image(systemName: "checkmark").font(.caption2.weight(.heavy)).foregroundColor(Theme.good)
+                }
+            }
+            .frame(width: 28, height: 28)
+            .opacity(isPast || isToday || ratio > 0 ? 1 : 0.35)
         }
-    }
-
-    private var dateLabel: String {
-        guard let d = DayKey.date(day.date) else { return day.date }
-        let s = d.formatted(.dateTime.weekday(.wide).day().month(.wide).locale(Locale(identifier: "fr_FR")))
-        return "J\(day.day) · " + s.prefix(1).uppercased() + String(s.dropFirst())
+        .card(padding: 12)
     }
 }
 
@@ -73,19 +80,41 @@ struct DayDetailView: View {
     let day: PlanDay
 
     var body: some View {
-        List {
-            Section(day.phase) {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 12) {
+                SectionHeader(eyebrow: day.phase, title: FR.longDate(DayKey.date(day.date) ?? Date()))
                 ForEach(Array(day.tasks.enumerated()), id: \.offset) { pair in
-                    TaskRow(day: day, index: pair.offset, task: pair.element)
+                    TaskCard(day: day, index: pair.offset, task: pair.element)
                 }
+                NavigationLink {
+                    GuidedSessionView(day: day)
+                } label: {
+                    Label("Faire cette séance en mode guidé", systemImage: "play.fill")
+                }
+                .buttonStyle(InkButtonStyle())
+                .padding(.top, 6)
             }
+            .padding(20)
         }
+        .paperBackground()
         .navigationTitle("Jour \(day.day)")
         .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct ResourcesView: View {
+    @EnvironmentObject private var progress: ProgressStore
+
+    private let checklist = [
+        "Convocation imprimée",
+        "Passeport en cours de validité",
+        "Trajet repéré, arrivée 30 minutes avant",
+        "Montre sans écran ou repère de temps",
+        "Nuit complète la veille",
+        "Petit-déjeuner et bouteille d'eau",
+        "Dossier Campus France prêt à recevoir le résultat"
+    ]
+
     var body: some View {
         List {
             Section("Ton point de départ") {
@@ -94,8 +123,24 @@ struct ResourcesView: View {
                 ResultLine(label: "Compréhension écrite", score: 555)
                 ResultLine(label: "Global", score: 520)
                 Text("Chaque épreuve du TCF est notée sur 699 et le score global est la moyenne des trois. Le C2 commence à 600. Les universités demandent en général 400 (B2), donc ton C1 te suffit déjà pour Campus France : le C2 est un bonus.")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
+                    .font(.caption).foregroundColor(Theme.muted)
+            }
+
+            Section("Check-list du jour J") {
+                ForEach(checklist, id: \.self) { item in
+                    Button {
+                        Haptics.tap()
+                        progress.toggleCheck(item)
+                    } label: {
+                        HStack(spacing: 12) {
+                            Image(systemName: progress.isChecked(item) ? "checkmark.circle.fill" : "circle")
+                                .foregroundColor(progress.isChecked(item) ? Theme.good : Theme.muted)
+                                .font(.title3)
+                            Text(item).foregroundColor(.primary)
+                                .strikethrough(progress.isChecked(item), color: Theme.muted)
+                        }
+                    }
+                }
             }
 
             Section("Ce qui sépare le C1 du C2") {
@@ -110,11 +155,9 @@ struct ResourcesView: View {
                 Bullet("Documents authentiques : conférences, débats, podcasts, éditoriaux.")
                 Bullet("Décryptage de l'implicite, des registres et de l'ironie.")
                 Bullet("Prise de notes pendant l'écoute puis reformulation en quelques phrases.")
+                Bullet("Dictées ciblées sur les accords et les homophones.")
                 Bullet("Lecture critique : trouver la thèse, les arguments et la position réelle de l'auteur.")
                 Bullet("Tests blancs en conditions réelles, puis analyse de chaque erreur.")
-                Text("C'est exactement ce que fait cette app : écoute en mode examen, questions d'attitude, leçons sur les pièges, test blanc chaque samedi.")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
             }
 
             Section("Stratégies le jour J") {
@@ -128,7 +171,7 @@ struct ResourcesView: View {
             Section("S'entraîner sur le vrai format") {
                 ExternalLink(title: "TCF Tout public (officiel)", subtitle: "France Éducation international, exemples d'épreuves", url: "https://www.france-education-international.fr/test/tcf-tout-public")
                 ExternalLink(title: "TV5Monde Apprendre", subtitle: "Exercices C1 audio et vidéo corrigés", url: "https://apprendre.tv5monde.com/fr")
-                ExternalLink(title: "RFI Savoirs", subtitle: "Actualité en français facile à avancé", url: "https://savoirs.rfi.fr/fr/apprendre-enseigner")
+                ExternalLink(title: "RFI Savoirs", subtitle: "Actualité en français, du facile à l'avancé", url: "https://savoirs.rfi.fr/fr/apprendre-enseigner")
             }
 
             Section("Écouter et lire chaque jour") {
@@ -145,6 +188,7 @@ struct ResourcesView: View {
                 Bullet("Vocabulaire progressif du français, niveau perfectionnement (CLE International).")
             }
         }
+        .paperList()
         .navigationTitle("Ressources")
         .navigationBarTitleDisplayMode(.inline)
     }
@@ -157,7 +201,7 @@ struct ResultLine: View {
         HStack {
             Text(label)
             Spacer()
-            Text("\(score)").monospacedDigit().fontWeight(.semibold).foregroundColor(Theme.scoreColor(score))
+            Text("\(score)").font(.number(16)).foregroundColor(Theme.scoreColor(score))
             LevelBadge(level: Level.cefr(score))
         }
     }
@@ -167,8 +211,8 @@ struct Bullet: View {
     let text: String
     init(_ text: String) { self.text = text }
     var body: some View {
-        HStack(alignment: .top, spacing: 8) {
-            Circle().fill(Theme.ink).frame(width: 5, height: 5).padding(.top, 7)
+        HStack(alignment: .top, spacing: 10) {
+            Circle().fill(Theme.pen).frame(width: 5, height: 5).padding(.top, 7)
             Text(text).fixedSize(horizontal: false, vertical: true)
         }
     }
@@ -178,12 +222,34 @@ struct SettingsView: View {
     @EnvironmentObject private var progress: ProgressStore
     @EnvironmentObject private var speaker: Speaker
     @State private var confirmReset = false
+    @State private var reminderTime = Date()
+    @State private var denied = false
 
     var body: some View {
         Form {
             Section("Examen") {
                 DatePicker("Date du TCF", selection: $progress.state.examDate, displayedComponents: .date)
-                    .environment(\.locale, Locale(identifier: "fr_FR"))
+                    .environment(\.locale, FR.locale)
+            }
+            Section {
+                Toggle("Rappel quotidien", isOn: Binding(
+                    get: { progress.state.reminderOn },
+                    set: { on in setReminder(on) }
+                ))
+                if progress.state.reminderOn {
+                    DatePicker("Heure", selection: $reminderTime, displayedComponents: .hourAndMinute)
+                        .environment(\.locale, FR.locale)
+                        .onChange(of: reminderTime) { t in
+                            let c = Calendar.current.dateComponents([.hour, .minute], from: t)
+                            progress.state.reminderHour = c.hour ?? 19
+                            progress.state.reminderMinute = c.minute ?? 0
+                            Reminders.schedule(hour: progress.state.reminderHour, minute: progress.state.reminderMinute)
+                        }
+                }
+            } header: {
+                Text("Rappel")
+            } footer: {
+                Text(denied ? "Les notifications sont refusées. Autorise-les dans Réglages iPhone › SansFaute." : "Une notification par jour pour ne pas casser ta série.")
             }
             Section {
                 SpeechRateControl()
@@ -206,19 +272,37 @@ struct SettingsView: View {
                     Text("Effacer ma progression")
                 }
             } footer: {
-                Text("Efface les résultats, les cartes et les erreurs enregistrées. La date d'examen est conservée.")
+                Text("Efface les résultats, les cartes, les erreurs et le temps enregistré. Tes propres mots et la date d'examen sont conservés.")
             }
             Section("À propos") {
-                Text("SansFaute · préparation TCF TP, du C1 vers le C2. Contenus originaux rédigés pour l'entraînement. Les scores affichés sont des estimations indicatives, pas des scores officiels.")
-                    .font(.footnote)
-                    .foregroundColor(.secondary)
+                Text("SansFaute 1.1 · préparation TCF TP, du C1 vers le C2. Contenus originaux rédigés pour l'entraînement. Les scores affichés sont des estimations indicatives, pas des scores officiels.")
+                    .font(.footnote).foregroundColor(Theme.muted)
             }
         }
+        .paperList()
         .navigationTitle("Réglages")
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            var c = DateComponents()
+            c.hour = progress.state.reminderHour
+            c.minute = progress.state.reminderMinute
+            reminderTime = Calendar.current.date(from: c) ?? Date()
+        }
         .confirmationDialog("Effacer toute la progression ?", isPresented: $confirmReset, titleVisibility: .visible) {
             Button("Effacer", role: .destructive) { progress.reset() }
             Button("Annuler", role: .cancel) {}
+        }
+    }
+
+    private func setReminder(_ on: Bool) {
+        if on {
+            Reminders.requestAndSchedule(hour: progress.state.reminderHour, minute: progress.state.reminderMinute) { granted in
+                progress.state.reminderOn = granted
+                denied = !granted
+            }
+        } else {
+            Reminders.cancel()
+            progress.state.reminderOn = false
         }
     }
 }

@@ -8,6 +8,7 @@ final class ContentStore: ObservableObject {
     let listening: [ListeningItem]
     let reading: [ReadingItem]
     let plan: [PlanDay]
+    let dictation: [DictationItem]
 
     /// Every question in the app, keyed by id, already wrapped with its audio or text.
     let itemsById: [String: QuizItem]
@@ -19,6 +20,7 @@ final class ContentStore: ObservableObject {
         listening = ContentStore.load("listening")
         reading = ContentStore.load("reading")
         plan = ContentStore.load("plan")
+        dictation = ContentStore.load("dictee")
 
         var map: [String: QuizItem] = [:]
         for q in grammar { map[q.id] = QuizItem(question: q) }
@@ -43,6 +45,30 @@ final class ContentStore: ObservableObject {
             print("Could not decode \(name).json: \(error)")
             return []
         }
+    }
+
+    /// Splits a listening document into sentences for shadowing.
+    func sentences(of item: ListeningItem) -> [Segment] {
+        var out: [Segment] = []
+        for seg in item.segments {
+            var current = ""
+            for ch in seg.text {
+                current.append(ch)
+                if ch == "." || ch == "?" || ch == "!" {
+                    let t = current.trimmingCharacters(in: .whitespaces)
+                    if t.count > 1 { out.append(Segment(speaker: seg.speaker, text: t)) }
+                    current = ""
+                }
+            }
+            let rest = current.trimmingCharacters(in: .whitespaces)
+            if rest.count > 1 { out.append(Segment(speaker: seg.speaker, text: rest)) }
+        }
+        return out
+    }
+
+    /// 60-second sprint pool: C1 and C2 grammar, shuffled.
+    func sprintPool() -> [Question] {
+        grammar.filter { $0.level != "B2" && $0.prompt.count < 140 }.shuffled()
     }
 
     func lesson(_ id: String?) -> Lesson? { lessons.first { $0.id == id } }
