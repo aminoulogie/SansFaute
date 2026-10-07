@@ -49,7 +49,7 @@ final class Speaker: NSObject, ObservableObject, AVSpeechSynthesizerDelegate {
             let isB = s.speaker == "B"
             u.voice = isB ? secondary : primary
             if sameVoice { u.pitchMultiplier = isB ? 1.25 : 0.9 }
-            u.rate = Float(Double(AVSpeechUtteranceDefaultRate) * rate)
+            u.rate = Float(0.5 * rate) // 0.5 is the system default speaking rate
             u.postUtteranceDelay = 0.4
             active.insert(ObjectIdentifier(u))
             synth.speak(u)
