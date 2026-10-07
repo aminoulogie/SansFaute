@@ -1,0 +1,463 @@
+[
+  {
+    "id": "subj_conj",
+    "title": "Subjonctif après les conjonctions",
+    "level": "C1",
+    "summary": "Le piège classique du TCF : certaines conjonctions imposent le subjonctif, d'autres l'indicatif, et quelques-unes changent de sens selon le mode.",
+    "rules": [
+      {
+        "title": "Toujours le subjonctif",
+        "explanation": "bien que, quoique, pour que, afin que, avant que, jusqu'à ce que, à moins que, à condition que, pourvu que, sans que, de peur que, de crainte que, en attendant que, non que.",
+        "examples": [
+          "Bien qu'il soit tard, nous continuons la réunion.",
+          "Je reste jusqu'à ce que tu reviennes.",
+          "Il est parti sans que personne s'en aperçoive."
+        ]
+      },
+      {
+        "title": "Toujours l'indicatif",
+        "explanation": "après que, pendant que, parce que, puisque, alors que, tandis que, dès que, depuis que, étant donné que, vu que. Après que se construit avec l'indicatif en français soutenu, même si on entend souvent le subjonctif à l'oral.",
+        "examples": [
+          "Après qu'il est arrivé, la séance a commencé.",
+          "Dès que le béton aura durci, on décoffrera."
+        ]
+      },
+      {
+        "title": "Ne explétif",
+        "explanation": "Avant que, à moins que, de peur que, de crainte que acceptent un ne explétif qui n'a aucune valeur négative. C'est une marque de registre soutenu.",
+        "examples": [
+          "Partons avant qu'il ne pleuve.",
+          "Je ne signerai pas, à moins qu'on ne me garantisse le paiement."
+        ]
+      }
+    ],
+    "trap": "Avant que prend le subjonctif, après que prend l'indicatif. C'est une des questions les plus fréquentes en maîtrise des structures."
+  },
+  {
+    "id": "subj_verbes",
+    "title": "Subjonctif après les verbes",
+    "level": "C1",
+    "summary": "Le mode dépend du sens du verbe principal : volonté, sentiment, doute ou nécessité appellent le subjonctif ; certitude et déclaration appellent l'indicatif.",
+    "rules": [
+      {
+        "title": "Volonté, sentiment, nécessité",
+        "explanation": "vouloir que, exiger que, souhaiter que, craindre que, regretter que, se réjouir que, il faut que, il est essentiel que, il importe que.",
+        "examples": [
+          "Je regrette que vous n'ayez pas pu venir.",
+          "Il importe que chaque calcul soit vérifié."
+        ]
+      },
+      {
+        "title": "Opinion à la forme négative ou interrogative",
+        "explanation": "penser, croire, trouver, être sûr que prennent l'indicatif à la forme affirmative, mais le subjonctif quand ils sont niés ou dans une question avec inversion.",
+        "examples": [
+          "Je pense qu'il a raison.",
+          "Je ne pense pas qu'il ait raison.",
+          "Croyez-vous qu'il puisse finir à temps ?"
+        ]
+      },
+      {
+        "title": "Espérer et il semble",
+        "explanation": "Espérer que prend l'indicatif. Il semble que prend le plus souvent le subjonctif, mais il me semble que prend l'indicatif.",
+        "examples": [
+          "J'espère qu'il viendra.",
+          "Il semble que le projet soit compromis.",
+          "Il me semble que le projet est compromis."
+        ]
+      }
+    ],
+    "trap": "Espérer que n'est jamais suivi du subjonctif à la forme affirmative, contrairement à souhaiter que."
+  },
+  {
+    "id": "concordance",
+    "title": "Concordance des temps",
+    "level": "C1",
+    "summary": "Quand le verbe principal est au passé, les temps de la subordonnée se décalent pour exprimer l'antériorité, la simultanéité ou la postériorité.",
+    "rules": [
+      {
+        "title": "Principale au présent",
+        "explanation": "Antériorité : passé composé ou imparfait. Simultanéité : présent. Postériorité : futur.",
+        "examples": [
+          "Il affirme qu'il a terminé.",
+          "Il affirme qu'il terminera demain."
+        ]
+      },
+      {
+        "title": "Principale au passé",
+        "explanation": "Antériorité : plus-que-parfait. Simultanéité : imparfait. Postériorité : conditionnel présent (futur dans le passé), conditionnel passé pour une action future accomplie.",
+        "examples": [
+          "Il affirmait qu'il avait terminé.",
+          "Il affirmait qu'il terminerait le lendemain.",
+          "Il affirmait qu'il aurait terminé avant midi."
+        ]
+      },
+      {
+        "title": "Subjonctif et passé",
+        "explanation": "Dans la langue courante, on garde le subjonctif présent ou passé même après un passé. Le subjonctif imparfait (qu'il fût, qu'il eût) appartient à la langue littéraire : il faut le reconnaître à l'écrit, pas forcément le produire.",
+        "examples": [
+          "Je voulais qu'il vienne.",
+          "Il fallait qu'il eût fini avant l'aube. (littéraire)"
+        ]
+      }
+    ],
+    "trap": "Le futur dans le passé se forme avec le conditionnel : il a dit qu'il viendrait, jamais qu'il viendra quand l'action est déjà passée par rapport au moment présent."
+  },
+  {
+    "id": "discours_indirect",
+    "title": "Discours rapporté",
+    "level": "C1",
+    "summary": "Passer du discours direct au discours indirect change les pronoms, les temps et les marqueurs de temps et de lieu.",
+    "rules": [
+      {
+        "title": "Marqueurs temporels",
+        "explanation": "aujourd'hui devient ce jour-là, hier devient la veille, demain devient le lendemain, la semaine prochaine devient la semaine suivante, ici devient là.",
+        "examples": [
+          "« Je partirai demain. » → Il a dit qu'il partirait le lendemain."
+        ]
+      },
+      {
+        "title": "Questions rapportées",
+        "explanation": "Est-ce que devient si ; qu'est-ce que devient ce que ; qu'est-ce qui devient ce qui. Pas d'inversion du sujet dans l'interrogation indirecte.",
+        "examples": [
+          "« Qu'est-ce que tu veux ? » → Il m'a demandé ce que je voulais.",
+          "« Est-ce que c'est fini ? » → Elle a demandé si c'était fini."
+        ]
+      },
+      {
+        "title": "Ordres rapportés",
+        "explanation": "L'impératif devient de + infinitif.",
+        "examples": [
+          "« Signez ici. » → Il m'a demandé de signer là."
+        ]
+      }
+    ],
+    "trap": "On ne dit pas il m'a demandé qu'est-ce que je voulais. La bonne forme est ce que je voulais."
+  },
+  {
+    "id": "relatifs",
+    "title": "Pronoms relatifs composés",
+    "level": "C1",
+    "summary": "Lequel, auquel, duquel et leurs variantes remplacent qui ou que après une préposition, surtout quand l'antécédent est une chose.",
+    "rules": [
+      {
+        "title": "Préposition + lequel",
+        "explanation": "Après une préposition (sur, dans, pour, avec, par, parmi, entre), on utilise lequel, laquelle, lesquels, lesquelles. Pour une personne, qui est aussi possible sauf après parmi et entre.",
+        "examples": [
+          "La poutre sur laquelle repose la dalle est fissurée.",
+          "Les collègues avec qui (avec lesquels) je travaille sont à Londres."
+        ]
+      },
+      {
+        "title": "À + lequel = auquel",
+        "explanation": "auquel, à laquelle, auxquels, auxquelles. S'utilise avec les verbes construits avec à : penser à, s'intéresser à, faire face à.",
+        "examples": [
+          "Le problème auquel nous faisons face est structurel.",
+          "Les normes auxquelles le projet doit se conformer sont européennes."
+        ]
+      },
+      {
+        "title": "Dont ou duquel",
+        "explanation": "Dont remplace de + antécédent. Mais après une locution prépositionnelle (à côté de, près de, au cours de, à cause de), on emploie duquel, de laquelle, desquels, desquelles.",
+        "examples": [
+          "Le rapport dont je t'ai parlé est prêt.",
+          "Le bâtiment à côté duquel se trouve le chantier est classé."
+        ]
+      }
+    ],
+    "trap": "Dont ne peut pas suivre une locution comme au cours de. On dit la réunion au cours de laquelle, jamais au cours dont."
+  },
+  {
+    "id": "pronoms_y_en",
+    "title": "Pronoms y, en et doubles pronoms",
+    "level": "B2",
+    "summary": "Y remplace à + chose, en remplace de + chose ou une quantité. L'ordre des doubles pronoms suit une règle fixe.",
+    "rules": [
+      {
+        "title": "Y et en",
+        "explanation": "Penser à ce projet → y penser. Parler de ce projet → en parler. Avec une personne, on garde à lui ou de lui : je pense à lui, je parle d'elle.",
+        "examples": [
+          "Tu t'intéresses au génie parasismique ? Oui, je m'y intéresse.",
+          "Tu as besoin de ces plans ? Oui, j'en ai besoin."
+        ]
+      },
+      {
+        "title": "Ordre des doubles pronoms",
+        "explanation": "me, te, se, nous, vous avant le, la, les, avant lui, leur, avant y, avant en.",
+        "examples": [
+          "Il me l'a envoyé.",
+          "Je le lui ai expliqué.",
+          "Il y en a trois."
+        ]
+      }
+    ],
+    "trap": "À l'impératif affirmatif : donne-le-moi, mais donne-m'en (et non donne-moi-z-en)."
+  },
+  {
+    "id": "accord_pp",
+    "title": "Accord du participe passé",
+    "level": "C1",
+    "summary": "Avec avoir, le participe s'accorde avec le COD seulement s'il est placé avant. Les verbes pronominaux suivent leur propre logique.",
+    "rules": [
+      {
+        "title": "Avec avoir",
+        "explanation": "Accord avec le COD placé avant : pronom (la, les, que) ou dans une interrogation.",
+        "examples": [
+          "Les plans que j'ai envoyés.",
+          "Ces erreurs, je les ai corrigées.",
+          "Quelles normes avez-vous appliquées ?"
+        ]
+      },
+      {
+        "title": "Avec en",
+        "explanation": "Pas d'accord quand le COD placé avant est en.",
+        "examples": [
+          "Des fautes, j'en ai fait beaucoup."
+        ]
+      },
+      {
+        "title": "Verbes pronominaux",
+        "explanation": "Si le pronom est COD, accord. S'il est COI (se parler, se téléphoner, se succéder, se plaire), pas d'accord. Si un COD suit le verbe, pas d'accord.",
+        "examples": [
+          "Elle s'est blessée.",
+          "Elles se sont parlé.",
+          "Elle s'est lavé les mains.",
+          "Les mains qu'elle s'est lavées."
+        ]
+      }
+    ],
+    "trap": "Les années se sont succédé : pas d'accord, car on succède à quelque chose."
+  },
+  {
+    "id": "connecteurs",
+    "title": "Connecteurs logiques soutenus",
+    "level": "C2",
+    "summary": "Au niveau C2, le test vérifie que vous savez choisir le connecteur exact selon la relation logique : concession, cause, conséquence, opposition, gradation.",
+    "rules": [
+      {
+        "title": "Concession",
+        "explanation": "néanmoins, toutefois, pourtant, cependant, quand bien même (+ conditionnel), encore que (+ subjonctif), si... que (+ subjonctif), tout... que (+ indicatif ou subjonctif), avoir beau + infinitif.",
+        "examples": [
+          "Quand bien même il le voudrait, il ne pourrait pas.",
+          "Si compétent qu'il soit, il a besoin d'aide.",
+          "Il a beau insister, la réponse reste non."
+        ]
+      },
+      {
+        "title": "Cause et conséquence",
+        "explanation": "Cause : faute de, à force de, dans la mesure où, d'autant que, sous prétexte que. Conséquence : dès lors, partant (soutenu), si bien que, de sorte que (+ indicatif pour la conséquence, + subjonctif pour le but).",
+        "examples": [
+          "Faute de moyens, le chantier a été suspendu.",
+          "Il a plu toute la nuit, si bien que le terrain est impraticable."
+        ]
+      },
+      {
+        "title": "Gradation et restriction",
+        "explanation": "voire, a fortiori, à plus forte raison, du moins, tout au plus, en revanche, au demeurant.",
+        "examples": [
+          "Ce retard coûtera des semaines, voire des mois.",
+          "Si l'étudiant moyen y parvient, a fortiori un ingénieur expérimenté."
+        ]
+      }
+    ],
+    "trap": "Quand bien même est suivi du conditionnel, encore que du subjonctif, alors que de l'indicatif."
+  },
+  {
+    "id": "hypothese",
+    "title": "Hypothèse et condition",
+    "level": "C1",
+    "summary": "Si ne prend jamais le conditionnel. Les autres expressions de condition ont chacune leur mode.",
+    "rules": [
+      {
+        "title": "Les trois systèmes avec si",
+        "explanation": "Si + présent → futur. Si + imparfait → conditionnel présent. Si + plus-que-parfait → conditionnel passé. Le mélange est possible : si + plus-que-parfait → conditionnel présent pour une conséquence actuelle.",
+        "examples": [
+          "Si j'avais révisé, j'aurais réussi.",
+          "Si j'avais révisé hier, je serais plus serein aujourd'hui."
+        ]
+      },
+      {
+        "title": "Autres expressions",
+        "explanation": "au cas où, dans l'hypothèse où (+ conditionnel) ; à condition que, pourvu que, à supposer que (+ subjonctif) ; à condition de (+ infinitif) ; en cas de (+ nom).",
+        "examples": [
+          "Au cas où il pleuvrait, le coulage sera reporté.",
+          "J'accepte, à condition que les délais soient respectés."
+        ]
+      },
+      {
+        "title": "Registre soutenu",
+        "explanation": "Le conditionnel passé deuxième forme (eût + participe) et l'inversion remplacent si à l'écrit littéraire.",
+        "examples": [
+          "Eût-il été prévenu, il aurait agi autrement."
+        ]
+      }
+    ],
+    "trap": "On ne dit jamais si j'aurais su. La bonne forme est si j'avais su."
+  },
+  {
+    "id": "prepositions",
+    "title": "Prépositions et constructions verbales",
+    "level": "C1",
+    "summary": "Beaucoup d'erreurs de niveau C1 viennent de la mauvaise préposition après un verbe, un nom ou un adjectif.",
+    "rules": [
+      {
+        "title": "Verbes à construction piège",
+        "explanation": "se souvenir de (mais se rappeler quelque chose), pallier quelque chose (sans à), remédier à, obéir à, renoncer à, s'attendre à ce que, consister à / en, se résoudre à, s'efforcer de.",
+        "examples": [
+          "Je me rappelle cette réunion. Je me souviens de cette réunion.",
+          "Il faut pallier ce manque.",
+          "Je m'attends à ce qu'il refuse."
+        ]
+      },
+      {
+        "title": "Noms et adjectifs",
+        "explanation": "être apte à, être enclin à, être susceptible de, être passible de, être en mesure de, faire face à, avoir trait à.",
+        "examples": [
+          "Ce poteau est susceptible de flamber sous charge.",
+          "La question a trait à la stabilité de l'ouvrage."
+        ]
+      }
+    ],
+    "trap": "Pallier est transitif direct : on pallie un problème, on ne pallie pas à un problème."
+  },
+  {
+    "id": "participe_gerondif",
+    "title": "Participe présent, gérondif et adjectif verbal",
+    "level": "C1",
+    "summary": "Le participe présent est invariable, l'adjectif verbal s'accorde et a parfois une orthographe différente.",
+    "rules": [
+      {
+        "title": "Gérondif",
+        "explanation": "En + participe présent. Le sujet du gérondif doit être le même que celui de la principale.",
+        "examples": [
+          "En vérifiant les plans, il a trouvé une erreur."
+        ]
+      },
+      {
+        "title": "Participe présent ou adjectif verbal",
+        "explanation": "Participe : action, invariable, souvent suivi d'un complément. Adjectif : qualité, s'accorde. Orthographes différentes : convainquant / convaincant, fatiguant / fatigant, négligeant / négligent, précédant / précédent, différant / différent, provoquant / provocant.",
+        "examples": [
+          "Des arguments convaincants.",
+          "En convainquant le jury, il a obtenu le poste.",
+          "Les jours précédant l'examen."
+        ]
+      }
+    ],
+    "trap": "Le jour précédent (adjectif) mais le jour précédant l'examen (participe suivi d'un complément)."
+  },
+  {
+    "id": "paronymes",
+    "title": "Paronymes et précision lexicale",
+    "level": "C2",
+    "summary": "Le niveau C2 se joue souvent sur un mot proche d'un autre. Le test propose des distracteurs qui se ressemblent.",
+    "rules": [
+      {
+        "title": "Paires fréquentes",
+        "explanation": "éminent (remarquable) / imminent (proche) ; conjecture (hypothèse) / conjoncture (situation) ; prolongation (dans le temps) / prolongement (dans l'espace) ; affliger / infliger ; percepteur / précepteur ; collision / collusion ; perpétrer / perpétuer ; recouvrer (récupérer) / recouvrir (couvrir).",
+        "examples": [
+          "La conjoncture économique est défavorable.",
+          "Il a recouvré la santé.",
+          "Le prolongement de la ligne de tram."
+        ]
+      },
+      {
+        "title": "Faux amis et anglicismes",
+        "explanation": "éventuellement signifie peut-être, pas finalement ; actuellement signifie en ce moment ; adresser un problème est un anglicisme, on dit traiter ou aborder un problème ; supporter signifie endurer, pas soutenir.",
+        "examples": [
+          "Nous allons aborder la question des délais."
+        ]
+      }
+    ],
+    "trap": "Au TCF, les quatre propositions se ressemblent souvent. Lisez la phrase entière avant de choisir, le contexte élimine les paronymes."
+  },
+  {
+    "id": "mise_en_relief",
+    "title": "Mise en relief et tournures",
+    "level": "C1",
+    "summary": "Les tournures emphatiques, le passif et la nominalisation sont typiques des textes de niveau C1 et C2.",
+    "rules": [
+      {
+        "title": "C'est... qui / c'est... que",
+        "explanation": "Accord du verbe avec le sujet mis en relief : c'est moi qui ai signé, c'est nous qui avons décidé.",
+        "examples": [
+          "C'est vous qui avez raison."
+        ]
+      },
+      {
+        "title": "Ce qui, ce que, ce dont, ce à quoi",
+        "explanation": "Ce dont j'ai besoin, c'est de temps. Ce à quoi je pense, c'est à l'avenir.",
+        "examples": [
+          "Ce dont il se plaint, c'est du bruit."
+        ]
+      },
+      {
+        "title": "Nominalisation",
+        "explanation": "Transformer une phrase verbale en groupe nominal, très fréquent dans la presse : le gouvernement a décidé de réformer → la décision du gouvernement de réformer.",
+        "examples": [
+          "Le report du chantier a été annoncé hier."
+        ]
+      }
+    ],
+    "trap": "C'est moi qui suis, pas c'est moi qui est. Le verbe s'accorde avec le pronom."
+  },
+  {
+    "id": "temps_litteraires",
+    "title": "Temps littéraires à reconnaître",
+    "level": "C2",
+    "summary": "Le passé simple, le passé antérieur et le subjonctif imparfait apparaissent dans les textes de compréhension écrite C2. Il faut les identifier rapidement.",
+    "rules": [
+      {
+        "title": "Passé simple",
+        "explanation": "Formes à reconnaître : il fut, il eut, il fit, il vint, il dut, il put, il sut, il mit, il prit, il vécut, ils furent, ils eurent.",
+        "examples": [
+          "Il fut le premier à comprendre l'ampleur du problème."
+        ]
+      },
+      {
+        "title": "Passé antérieur",
+        "explanation": "Auxiliaire au passé simple + participe, après quand, lorsque, dès que, à peine... que, dans un récit au passé simple.",
+        "examples": [
+          "Dès qu'il eut fini, il quitta la salle."
+        ]
+      },
+      {
+        "title": "Subjonctif imparfait et plus-que-parfait",
+        "explanation": "qu'il fût, qu'il eût, qu'il fît, qu'il vînt. Attention à l'accent circonflexe qui distingue il eut (passé simple) de qu'il eût (subjonctif).",
+        "examples": [
+          "Il fallait qu'il vînt sans tarder."
+        ]
+      }
+    ],
+    "trap": "À peine + inversion : à peine fut-il arrivé que la réunion commença."
+  },
+  {
+    "id": "registres",
+    "title": "Registres de langue et implicite",
+    "level": "C2",
+    "summary": "En compréhension orale et écrite C2, les questions portent sur le ton, l'ironie, l'attitude du locuteur et ce qui est sous-entendu.",
+    "rules": [
+      {
+        "title": "Repérer l'attitude",
+        "explanation": "Les mots modalisateurs révèlent la position : certes (concession avant objection), soi-disant (doute), il va sans dire, force est de constater, on peut s'interroger sur, prétendument.",
+        "examples": [
+          "Certes, le projet est ambitieux, mais son financement reste flou.",
+          "Ce soi-disant progrès coûte cher."
+        ]
+      },
+      {
+        "title": "Ironie et antiphrase",
+        "explanation": "Le locuteur dit le contraire de ce qu'il pense. Indices : intonation, exagération, décalage entre les mots et la situation.",
+        "examples": [
+          "Bravo, encore un retard de trois mois, quelle efficacité !"
+        ]
+      },
+      {
+        "title": "Registres",
+        "explanation": "Familier : bosser, un truc, c'est galère. Courant : travailler, une chose, c'est difficile. Soutenu : œuvrer, une entreprise ardue, il sied de.",
+        "examples": [
+          "Il sied de rappeler que la séance est publique."
+        ]
+      }
+    ],
+    "trap": "Une question C2 du type « Quelle est l'attitude du journaliste ? » attend un mot comme sceptique, ironique, nuancé ou indigné, pas un résumé du contenu."
+  }
+]

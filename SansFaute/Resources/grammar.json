@@ -1,0 +1,1752 @@
+[
+ {
+  "id": "g001",
+  "topic": "subj_conj",
+  "level": "C1",
+  "prompt": "Bien qu'il ___ beaucoup d'expérience, il a échoué à l'entretien.",
+  "options": [
+   "a",
+   "ait",
+   "aurait",
+   "avait"
+  ],
+  "answer": 1,
+  "explanation": "Bien que impose le subjonctif : qu'il ait."
+ },
+ {
+  "id": "g002",
+  "topic": "subj_conj",
+  "level": "C1",
+  "prompt": "Après qu'il ___ la réunion, tout le monde est parti.",
+  "options": [
+   "ait quitté",
+   "a quitté",
+   "eût quitté",
+   "quitte"
+  ],
+  "answer": 1,
+  "explanation": "Après que se construit avec l'indicatif en français standard."
+ },
+ {
+  "id": "g003",
+  "topic": "subj_conj",
+  "level": "C1",
+  "prompt": "Nous attendrons jusqu'à ce que le béton ___ sec.",
+  "options": [
+   "est",
+   "sera",
+   "soit",
+   "serait"
+  ],
+  "answer": 2,
+  "explanation": "Jusqu'à ce que impose le subjonctif."
+ },
+ {
+  "id": "g004",
+  "topic": "subj_conj",
+  "level": "C1",
+  "prompt": "Il est sorti sans que personne ne le ___.",
+  "options": [
+   "voit",
+   "verra",
+   "voie",
+   "voyait"
+  ],
+  "answer": 2,
+  "explanation": "Sans que impose le subjonctif : qu'on le voie."
+ },
+ {
+  "id": "g005",
+  "topic": "subj_conj",
+  "level": "C1",
+  "prompt": "Je vous préviens afin que vous ___ le temps de vous organiser.",
+  "options": [
+   "avez",
+   "ayez",
+   "aurez",
+   "auriez"
+  ],
+  "answer": 1,
+  "explanation": "Afin que exprime le but et impose le subjonctif."
+ },
+ {
+  "id": "g006",
+  "topic": "subj_conj",
+  "level": "C1",
+  "prompt": "Dès que vous ___ les résultats, envoyez-les-moi.",
+  "options": [
+   "ayez reçu",
+   "aurez reçu",
+   "recevriez",
+   "ayant reçu"
+  ],
+  "answer": 1,
+  "explanation": "Dès que prend l'indicatif. Le futur antérieur marque l'antériorité par rapport à l'impératif."
+ },
+ {
+  "id": "g007",
+  "topic": "subj_conj",
+  "level": "C2",
+  "prompt": "Partons maintenant, de crainte qu'il ___ trop tard.",
+  "options": [
+   "n'est",
+   "ne soit",
+   "ne sera",
+   "n'était"
+  ],
+  "answer": 1,
+  "explanation": "De crainte que impose le subjonctif, avec le ne explétif facultatif en registre soutenu."
+ },
+ {
+  "id": "g008",
+  "topic": "subj_conj",
+  "level": "C1",
+  "prompt": "Il travaille le soir, ___ sa femme s'occupe des enfants.",
+  "options": [
+   "bien que",
+   "pendant que",
+   "pour que",
+   "avant que"
+  ],
+  "answer": 1,
+  "explanation": "Pendant que marque la simultanéité et prend l'indicatif, comme le verbe s'occupe."
+ },
+ {
+  "id": "g009",
+  "topic": "subj_conj",
+  "level": "C2",
+  "prompt": "Non qu'il ___ incompétent, mais il manque de rigueur.",
+  "options": [
+   "est",
+   "soit",
+   "serait",
+   "était"
+  ],
+  "answer": 1,
+  "explanation": "Non que (cause rejetée) impose le subjonctif."
+ },
+ {
+  "id": "g010",
+  "topic": "subj_conj",
+  "level": "C1",
+  "prompt": "Je signerai le contrat pourvu que les conditions ___ claires.",
+  "options": [
+   "sont",
+   "seront",
+   "soient",
+   "seraient"
+  ],
+  "answer": 2,
+  "explanation": "Pourvu que (condition) impose le subjonctif."
+ },
+ {
+  "id": "g011",
+  "topic": "subj_verbes",
+  "level": "C1",
+  "prompt": "Je ne pense pas qu'il ___ capable de finir à temps.",
+  "options": [
+   "est",
+   "soit",
+   "sera",
+   "serait"
+  ],
+  "answer": 1,
+  "explanation": "Penser à la forme négative entraîne le subjonctif."
+ },
+ {
+  "id": "g012",
+  "topic": "subj_verbes",
+  "level": "C1",
+  "prompt": "J'espère que vous ___ réussir l'examen.",
+  "options": [
+   "puissiez",
+   "pourrez",
+   "pourriez",
+   "pouviez"
+  ],
+  "answer": 1,
+  "explanation": "Espérer que prend l'indicatif, ici le futur."
+ },
+ {
+  "id": "g013",
+  "topic": "subj_verbes",
+  "level": "C1",
+  "prompt": "Il semble que la situation ___ empiré.",
+  "options": [
+   "a",
+   "ait",
+   "aura",
+   "aurait"
+  ],
+  "answer": 1,
+  "explanation": "Il semble que (sans pronom) prend en général le subjonctif."
+ },
+ {
+  "id": "g014",
+  "topic": "subj_verbes",
+  "level": "C1",
+  "prompt": "Il me semble que la situation ___ empiré.",
+  "options": [
+   "ait",
+   "a",
+   "eût",
+   "aurait eu"
+  ],
+  "answer": 1,
+  "explanation": "Il me semble que exprime une opinion assez sûre et prend l'indicatif."
+ },
+ {
+  "id": "g015",
+  "topic": "subj_verbes",
+  "level": "C1",
+  "prompt": "Je regrette que vous n'___ pas pu assister à la soutenance.",
+  "options": [
+   "avez",
+   "ayez",
+   "aviez",
+   "aurez"
+  ],
+  "answer": 1,
+  "explanation": "Regretter que (sentiment) impose le subjonctif, ici passé : que vous n'ayez pas pu."
+ },
+ {
+  "id": "g016",
+  "topic": "subj_verbes",
+  "level": "C1",
+  "prompt": "Le directeur exige que chaque note de calcul ___ vérifiée par un second ingénieur.",
+  "options": [
+   "est",
+   "soit",
+   "sera",
+   "serait"
+  ],
+  "answer": 1,
+  "explanation": "Exiger que (volonté) impose le subjonctif."
+ },
+ {
+  "id": "g017",
+  "topic": "subj_verbes",
+  "level": "C2",
+  "prompt": "Croyez-vous qu'il ___ la vérité ?",
+  "options": [
+   "dit",
+   "dise",
+   "dira",
+   "disait"
+  ],
+  "answer": 1,
+  "explanation": "Croire à la forme interrogative avec inversion entraîne normalement le subjonctif."
+ },
+ {
+  "id": "g018",
+  "topic": "subj_verbes",
+  "level": "C1",
+  "prompt": "Il est probable qu'il ___ demain.",
+  "options": [
+   "vienne",
+   "viendra",
+   "vint",
+   "soit venu"
+  ],
+  "answer": 1,
+  "explanation": "Il est probable que prend l'indicatif, contrairement à il est possible que, qui prend le subjonctif."
+ },
+ {
+  "id": "g019",
+  "topic": "subj_verbes",
+  "level": "C1",
+  "prompt": "Il est possible qu'il ___ demain.",
+  "options": [
+   "viendra",
+   "vienne",
+   "viendrait",
+   "vient"
+  ],
+  "answer": 1,
+  "explanation": "Il est possible que exprime un doute et impose le subjonctif."
+ },
+ {
+  "id": "g020",
+  "topic": "subj_verbes",
+  "level": "C2",
+  "prompt": "Le fait qu'il ___ refusé ne m'étonne pas.",
+  "options": [
+   "a",
+   "ait",
+   "aura",
+   "avait eu"
+  ],
+  "answer": 1,
+  "explanation": "Le fait que, en tête de phrase, est le plus souvent suivi du subjonctif."
+ },
+ {
+  "id": "g021",
+  "topic": "concordance",
+  "level": "C1",
+  "prompt": "Il m'a assuré qu'il ___ le rapport le lendemain.",
+  "options": [
+   "enverra",
+   "enverrait",
+   "envoie",
+   "envoyait"
+  ],
+  "answer": 1,
+  "explanation": "Futur dans le passé : conditionnel présent."
+ },
+ {
+  "id": "g022",
+  "topic": "concordance",
+  "level": "C1",
+  "prompt": "Elle savait qu'il ___ déjà la nouvelle.",
+  "options": [
+   "a appris",
+   "avait appris",
+   "apprendrait",
+   "apprenne"
+  ],
+  "answer": 1,
+  "explanation": "Antériorité par rapport à un verbe au passé : plus-que-parfait."
+ },
+ {
+  "id": "g023",
+  "topic": "concordance",
+  "level": "C1",
+  "prompt": "Ils pensaient que le chantier ___ terminé avant l'hiver.",
+  "options": [
+   "sera",
+   "serait",
+   "aura été",
+   "est"
+  ],
+  "answer": 1,
+  "explanation": "Postériorité dans le passé : conditionnel présent."
+ },
+ {
+  "id": "g024",
+  "topic": "concordance",
+  "level": "C2",
+  "prompt": "Il avait promis qu'il ___ fini avant notre retour.",
+  "options": [
+   "aura",
+   "aurait",
+   "avait",
+   "ait"
+  ],
+  "answer": 1,
+  "explanation": "Action future accomplie vue du passé : conditionnel passé (aurait fini)."
+ },
+ {
+  "id": "g025",
+  "topic": "concordance",
+  "level": "C1",
+  "prompt": "Je croyais que tu ___ à Lyon cette année-là.",
+  "options": [
+   "habites",
+   "habitais",
+   "habiteras",
+   "habites déjà"
+  ],
+  "answer": 1,
+  "explanation": "Simultanéité dans le passé : imparfait."
+ },
+ {
+  "id": "g026",
+  "topic": "discours_indirect",
+  "level": "C1",
+  "prompt": "« Qu'est-ce que tu veux ? » → Il m'a demandé ___ je voulais.",
+  "options": [
+   "qu'est-ce que",
+   "ce que",
+   "que",
+   "quoi"
+  ],
+  "answer": 1,
+  "explanation": "Qu'est-ce que devient ce que au discours indirect."
+ },
+ {
+  "id": "g027",
+  "topic": "discours_indirect",
+  "level": "C1",
+  "prompt": "« Je partirai demain. » → Il a dit qu'il partirait ___.",
+  "options": [
+   "demain",
+   "le lendemain",
+   "la veille",
+   "ce jour"
+  ],
+  "answer": 1,
+  "explanation": "Au discours indirect passé, demain devient le lendemain."
+ },
+ {
+  "id": "g028",
+  "topic": "discours_indirect",
+  "level": "C1",
+  "prompt": "« Est-ce que le projet est validé ? » → Elle a demandé ___ le projet était validé.",
+  "options": [
+   "que",
+   "si",
+   "est-ce que",
+   "ce que"
+  ],
+  "answer": 1,
+  "explanation": "Une question fermée rapportée est introduite par si."
+ },
+ {
+  "id": "g029",
+  "topic": "discours_indirect",
+  "level": "C1",
+  "prompt": "« Qu'est-ce qui se passe ? » → Il voulait savoir ___ se passait.",
+  "options": [
+   "ce que",
+   "qu'est-ce qui",
+   "ce qui",
+   "qui"
+  ],
+  "answer": 2,
+  "explanation": "Qu'est-ce qui devient ce qui."
+ },
+ {
+  "id": "g030",
+  "topic": "discours_indirect",
+  "level": "C1",
+  "prompt": "« Rappelez-moi. » → Il m'a demandé ___ rappeler.",
+  "options": [
+   "que je le",
+   "de le",
+   "à le",
+   "le"
+  ],
+  "answer": 1,
+  "explanation": "L'impératif rapporté devient de + infinitif."
+ },
+ {
+  "id": "g031",
+  "topic": "relatifs",
+  "level": "C1",
+  "prompt": "La dalle sur ___ repose la charge est en béton précontraint.",
+  "options": [
+   "laquelle",
+   "lequel",
+   "qui",
+   "dont"
+  ],
+  "answer": 0,
+  "explanation": "Préposition + chose féminine : sur laquelle."
+ },
+ {
+  "id": "g032",
+  "topic": "relatifs",
+  "level": "C1",
+  "prompt": "Le problème ___ nous sommes confrontés est complexe.",
+  "options": [
+   "auquel",
+   "dont",
+   "que",
+   "lequel"
+  ],
+  "answer": 0,
+  "explanation": "Être confronté à : à + lequel = auquel."
+ },
+ {
+  "id": "g033",
+  "topic": "relatifs",
+  "level": "C1",
+  "prompt": "Voici le logiciel ___ je t'ai parlé.",
+  "options": [
+   "que",
+   "duquel",
+   "dont",
+   "auquel"
+  ],
+  "answer": 2,
+  "explanation": "Parler de : dont."
+ },
+ {
+  "id": "g034",
+  "topic": "relatifs",
+  "level": "C2",
+  "prompt": "La réunion au cours ___ la décision a été prise était houleuse.",
+  "options": [
+   "dont",
+   "de laquelle",
+   "duquel",
+   "laquelle"
+  ],
+  "answer": 1,
+  "explanation": "Après une locution prépositionnelle (au cours de), dont est impossible : de laquelle."
+ },
+ {
+  "id": "g035",
+  "topic": "relatifs",
+  "level": "C1",
+  "prompt": "Les normes ___ le projet doit se conformer sont strictes.",
+  "options": [
+   "auxquelles",
+   "desquelles",
+   "dont",
+   "lesquelles"
+  ],
+  "answer": 0,
+  "explanation": "Se conformer à : à + lesquelles = auxquelles."
+ },
+ {
+  "id": "g036",
+  "topic": "relatifs",
+  "level": "C1",
+  "prompt": "C'est une idée ___ je n'avais jamais pensé.",
+  "options": [
+   "que",
+   "dont",
+   "à laquelle",
+   "laquelle"
+  ],
+  "answer": 2,
+  "explanation": "Penser à : à laquelle."
+ },
+ {
+  "id": "g037",
+  "topic": "relatifs",
+  "level": "C2",
+  "prompt": "Les candidats parmi ___ il a été choisi étaient tous très qualifiés.",
+  "options": [
+   "qui",
+   "lesquels",
+   "dont",
+   "que"
+  ],
+  "answer": 1,
+  "explanation": "Après parmi, on emploie lesquels, même pour des personnes. Parmi qui est incorrect."
+ },
+ {
+  "id": "g038",
+  "topic": "relatifs",
+  "level": "C1",
+  "prompt": "L'entreprise pour ___ je travaille est basée à Londres.",
+  "options": [
+   "laquelle",
+   "qui",
+   "que",
+   "dont"
+  ],
+  "answer": 0,
+  "explanation": "Pour + entreprise (féminin, chose) : pour laquelle."
+ },
+ {
+  "id": "g039",
+  "topic": "relatifs",
+  "level": "C2",
+  "prompt": "Le pont près ___ se trouve la gare a été rénové.",
+  "options": [
+   "dont",
+   "duquel",
+   "de qui",
+   "lequel"
+  ],
+  "answer": 1,
+  "explanation": "Près de est une locution : près duquel."
+ },
+ {
+  "id": "g040",
+  "topic": "relatifs",
+  "level": "C1",
+  "prompt": "Ce ___ il a besoin, c'est d'un peu de temps.",
+  "options": [
+   "que",
+   "qui",
+   "dont",
+   "à quoi"
+  ],
+  "answer": 2,
+  "explanation": "Avoir besoin de : ce dont."
+ },
+ {
+  "id": "g041",
+  "topic": "pronoms_y_en",
+  "level": "B2",
+  "prompt": "Tu t'intéresses au génie parasismique ? Oui, je ___ intéresse beaucoup.",
+  "options": [
+   "m'en",
+   "m'y",
+   "me le",
+   "lui"
+  ],
+  "answer": 1,
+  "explanation": "S'intéresser à + chose : y."
+ },
+ {
+  "id": "g042",
+  "topic": "pronoms_y_en",
+  "level": "B2",
+  "prompt": "Tu as besoin de ces documents ? Oui, j'___ ai besoin.",
+  "options": [
+   "y",
+   "en",
+   "les",
+   "leur"
+  ],
+  "answer": 1,
+  "explanation": "Avoir besoin de : en."
+ },
+ {
+  "id": "g043",
+  "topic": "pronoms_y_en",
+  "level": "C1",
+  "prompt": "Le rapport ? Je ___ ai envoyé hier.",
+  "options": [
+   "le lui",
+   "lui le",
+   "lui l'",
+   "le leur y"
+  ],
+  "answer": 0,
+  "explanation": "Ordre : le avant lui. Je le lui ai envoyé."
+ },
+ {
+  "id": "g044",
+  "topic": "pronoms_y_en",
+  "level": "C1",
+  "prompt": "Des bonnes idées, il ___ a toujours.",
+  "options": [
+   "y en",
+   "en y",
+   "les",
+   "y"
+  ],
+  "answer": 0,
+  "explanation": "Il y a + en : il y en a."
+ },
+ {
+  "id": "g045",
+  "topic": "pronoms_y_en",
+  "level": "C1",
+  "prompt": "Tu penses à ta mère ? Oui, je pense ___.",
+  "options": [
+   "y",
+   "à elle",
+   "lui",
+   "en"
+  ],
+  "answer": 1,
+  "explanation": "Penser à + personne : à elle, pas y."
+ },
+ {
+  "id": "g046",
+  "topic": "pronoms_y_en",
+  "level": "C1",
+  "prompt": "Donne-___ un peu, s'il te plaît.",
+  "options": [
+   "moi-en",
+   "m'en",
+   "en-moi",
+   "me-z-en"
+  ],
+  "answer": 1,
+  "explanation": "À l'impératif, moi + en devient m'en."
+ },
+ {
+  "id": "g047",
+  "topic": "accord_pp",
+  "level": "C1",
+  "prompt": "Les plans que j'ai ___ hier sont faux.",
+  "options": [
+   "reçu",
+   "reçus",
+   "reçues",
+   "reçue"
+  ],
+  "answer": 1,
+  "explanation": "COD que (les plans, masculin pluriel) placé avant avoir : accord."
+ },
+ {
+  "id": "g048",
+  "topic": "accord_pp",
+  "level": "C1",
+  "prompt": "Des erreurs, j'en ai ___ plusieurs.",
+  "options": [
+   "corrigé",
+   "corrigées",
+   "corrigés",
+   "corrigée"
+  ],
+  "answer": 0,
+  "explanation": "Avec en, pas d'accord du participe."
+ },
+ {
+  "id": "g049",
+  "topic": "accord_pp",
+  "level": "C1",
+  "prompt": "Elles se sont ___ au téléphone pendant une heure.",
+  "options": [
+   "parlées",
+   "parlé",
+   "parlés",
+   "parlée"
+  ],
+  "answer": 1,
+  "explanation": "Se parler : on parle à quelqu'un, le pronom est COI, pas d'accord."
+ },
+ {
+  "id": "g050",
+  "topic": "accord_pp",
+  "level": "C1",
+  "prompt": "Elle s'est ___ les mains avant de manger.",
+  "options": [
+   "lavées",
+   "lavé",
+   "lavée",
+   "lavés"
+  ],
+  "answer": 1,
+  "explanation": "Le COD (les mains) est placé après : pas d'accord."
+ },
+ {
+  "id": "g051",
+  "topic": "accord_pp",
+  "level": "C2",
+  "prompt": "Les crises se sont ___ sans interruption.",
+  "options": [
+   "succédées",
+   "succédé",
+   "succédés",
+   "succédée"
+  ],
+  "answer": 1,
+  "explanation": "Succéder à : pronom COI, participe invariable."
+ },
+ {
+  "id": "g052",
+  "topic": "accord_pp",
+  "level": "C1",
+  "prompt": "Quelles solutions avez-vous ___ ?",
+  "options": [
+   "retenu",
+   "retenues",
+   "retenus",
+   "retenue"
+  ],
+  "answer": 1,
+  "explanation": "COD (quelles solutions) placé avant : accord au féminin pluriel."
+ },
+ {
+  "id": "g053",
+  "topic": "accord_pp",
+  "level": "C2",
+  "prompt": "La chaleur qu'il a ___ cet été a été exceptionnelle.",
+  "options": [
+   "faite",
+   "fait",
+   "faits",
+   "faites"
+  ],
+  "answer": 1,
+  "explanation": "Faire impersonnel (il a fait chaud) : participe invariable."
+ },
+ {
+  "id": "g054",
+  "topic": "accord_pp",
+  "level": "C2",
+  "prompt": "Les efforts que ce projet m'a ___ étaient énormes.",
+  "options": [
+   "coûté",
+   "coûtés",
+   "coûtées",
+   "coûtée"
+  ],
+  "answer": 1,
+  "explanation": "Coûter au sens figuré (exiger) a un vrai COD : accord. Au sens propre (prix), il est invariable."
+ },
+ {
+  "id": "g055",
+  "topic": "connecteurs",
+  "level": "C2",
+  "prompt": "___ il le voudrait, il ne pourrait pas annuler le contrat.",
+  "options": [
+   "Bien qu'",
+   "Quand bien même",
+   "Même si",
+   "Alors qu'"
+  ],
+  "answer": 1,
+  "explanation": "Quand bien même + conditionnel. Même si n'est jamais suivi du conditionnel."
+ },
+ {
+  "id": "g056",
+  "topic": "connecteurs",
+  "level": "C2",
+  "prompt": "Il a ___ insister, personne ne l'écoute.",
+  "options": [
+   "beau",
+   "bien",
+   "tort de",
+   "eu beau"
+  ],
+  "answer": 0,
+  "explanation": "Avoir beau + infinitif exprime la concession."
+ },
+ {
+  "id": "g057",
+  "topic": "connecteurs",
+  "level": "C1",
+  "prompt": "Ce retard nous coûtera des semaines, ___ des mois.",
+  "options": [
+   "voire",
+   "voir",
+   "pourtant",
+   "or"
+  ],
+  "answer": 0,
+  "explanation": "Voire (et même) introduit une gradation. Voir est le verbe."
+ },
+ {
+  "id": "g058",
+  "topic": "connecteurs",
+  "level": "C1",
+  "prompt": "___ de financement, le chantier a été suspendu.",
+  "options": [
+   "Grâce",
+   "Faute",
+   "À cause",
+   "Malgré"
+  ],
+  "answer": 1,
+  "explanation": "Faute de + nom : par manque de."
+ },
+ {
+  "id": "g059",
+  "topic": "connecteurs",
+  "level": "C2",
+  "prompt": "Si compétent qu'il ___, il ne peut pas tout faire seul.",
+  "options": [
+   "est",
+   "soit",
+   "serait",
+   "sera"
+  ],
+  "answer": 1,
+  "explanation": "Si + adjectif + que (concession) impose le subjonctif."
+ },
+ {
+  "id": "g060",
+  "topic": "connecteurs",
+  "level": "C1",
+  "prompt": "Il fait beau ici, ___ il pleut à Paris.",
+  "options": [
+   "tandis qu'",
+   "bien qu'",
+   "de sorte qu'",
+   "afin qu'"
+  ],
+  "answer": 0,
+  "explanation": "Tandis que marque l'opposition et prend l'indicatif."
+ },
+ {
+  "id": "g061",
+  "topic": "connecteurs",
+  "level": "C2",
+  "prompt": "Le modèle est cohérent, ___ quelques vérifications soient encore nécessaires.",
+  "options": [
+   "encore que",
+   "dès lors que",
+   "d'autant que",
+   "parce que"
+  ],
+  "answer": 0,
+  "explanation": "Encore que exprime une restriction et se construit avec le subjonctif (soient). Les autres conjonctions prennent l'indicatif."
+ },
+ {
+  "id": "g062",
+  "topic": "connecteurs",
+  "level": "C2",
+  "prompt": "Les étudiants y arrivent ; ___ un ingénieur expérimenté devrait y arriver.",
+  "options": [
+   "a fortiori",
+   "a priori",
+   "en revanche",
+   "au contraire"
+  ],
+  "answer": 0,
+  "explanation": "A fortiori : à plus forte raison."
+ },
+ {
+  "id": "g063",
+  "topic": "connecteurs",
+  "level": "C1",
+  "prompt": "Il n'a pas révisé, ___ il a réussi l'examen.",
+  "options": [
+   "pourtant",
+   "donc",
+   "ainsi",
+   "dès lors"
+  ],
+  "answer": 0,
+  "explanation": "Pourtant marque l'opposition entre une cause attendue et le résultat."
+ },
+ {
+  "id": "g064",
+  "topic": "connecteurs",
+  "level": "C2",
+  "prompt": "Il refuse de venir, ___ qu'il est malade.",
+  "options": [
+   "sous prétexte",
+   "de peur",
+   "à moins",
+   "faute"
+  ],
+  "answer": 0,
+  "explanation": "Sous prétexte que + indicatif : cause présentée comme douteuse."
+ },
+ {
+  "id": "g065",
+  "topic": "connecteurs",
+  "level": "C1",
+  "prompt": "Il a tellement plu ___ le terrain est inondé.",
+  "options": [
+   "que",
+   "si bien",
+   "de sorte",
+   "alors"
+  ],
+  "answer": 0,
+  "explanation": "Tellement... que exprime la conséquence."
+ },
+ {
+  "id": "g066",
+  "topic": "connecteurs",
+  "level": "C2",
+  "prompt": "Parlez plus fort, de sorte que tout le monde vous ___.",
+  "options": [
+   "entend",
+   "entende",
+   "entendra",
+   "entendrait"
+  ],
+  "answer": 1,
+  "explanation": "De sorte que exprimant le but impose le subjonctif. Pour une conséquence réalisée, ce serait l'indicatif."
+ },
+ {
+  "id": "g067",
+  "topic": "hypothese",
+  "level": "C1",
+  "prompt": "Si j'___ su, je ne serais pas venu.",
+  "options": [
+   "aurais",
+   "avais",
+   "eu",
+   "aie"
+  ],
+  "answer": 1,
+  "explanation": "Si + plus-que-parfait → conditionnel passé."
+ },
+ {
+  "id": "g068",
+  "topic": "hypothese",
+  "level": "C1",
+  "prompt": "Au cas où vous ___ un problème, appelez-moi.",
+  "options": [
+   "avez",
+   "auriez",
+   "ayez",
+   "aurez"
+  ],
+  "answer": 1,
+  "explanation": "Au cas où + conditionnel."
+ },
+ {
+  "id": "g069",
+  "topic": "hypothese",
+  "level": "C1",
+  "prompt": "J'accepte à condition que vous ___ les délais.",
+  "options": [
+   "respectez",
+   "respectiez",
+   "respecterez",
+   "respecteriez"
+  ],
+  "answer": 1,
+  "explanation": "À condition que + subjonctif."
+ },
+ {
+  "id": "g070",
+  "topic": "hypothese",
+  "level": "C1",
+  "prompt": "Si tu avais pris le train de 8 h, tu ___ déjà là.",
+  "options": [
+   "serais",
+   "seras",
+   "aurais été",
+   "es"
+  ],
+  "answer": 0,
+  "explanation": "Hypothèse sur le passé, conséquence dans le présent : conditionnel présent."
+ },
+ {
+  "id": "g071",
+  "topic": "hypothese",
+  "level": "C2",
+  "prompt": "___-il été prévenu, il aurait agi autrement.",
+  "options": [
+   "Eût",
+   "Eut",
+   "Avait",
+   "Aurait"
+  ],
+  "answer": 0,
+  "explanation": "Inversion avec le subjonctif plus-que-parfait (conditionnel passé deuxième forme) : eût-il été prévenu."
+ },
+ {
+  "id": "g072",
+  "topic": "hypothese",
+  "level": "C1",
+  "prompt": "À supposer qu'il ___ raison, que ferions-nous ?",
+  "options": [
+   "a",
+   "ait",
+   "aurait",
+   "avait"
+  ],
+  "answer": 1,
+  "explanation": "À supposer que + subjonctif."
+ },
+ {
+  "id": "g073",
+  "topic": "hypothese",
+  "level": "C1",
+  "prompt": "Si le client ___ demain, nous lui présenterons les plans.",
+  "options": [
+   "viendra",
+   "vient",
+   "viendrait",
+   "venait"
+  ],
+  "answer": 1,
+  "explanation": "Si + présent → futur. Jamais de futur après si de condition."
+ },
+ {
+  "id": "g074",
+  "topic": "prepositions",
+  "level": "C1",
+  "prompt": "Il faut pallier ___ manque de personnel.",
+  "options": [
+   "au",
+   "ce",
+   "à ce",
+   "de ce"
+  ],
+  "answer": 1,
+  "explanation": "Pallier est transitif direct : pallier quelque chose."
+ },
+ {
+  "id": "g075",
+  "topic": "prepositions",
+  "level": "C1",
+  "prompt": "Je me rappelle ___ cette conversation.",
+  "options": [
+   "de",
+   "à",
+   "∅ (rien)",
+   "sur"
+  ],
+  "answer": 2,
+  "explanation": "Se rappeler quelque chose, sans préposition. On se souvient de."
+ },
+ {
+  "id": "g076",
+  "topic": "prepositions",
+  "level": "C1",
+  "prompt": "Il faut remédier ___ ce problème rapidement.",
+  "options": [
+   "∅ (rien)",
+   "de",
+   "à",
+   "pour"
+  ],
+  "answer": 2,
+  "explanation": "Remédier à quelque chose."
+ },
+ {
+  "id": "g077",
+  "topic": "prepositions",
+  "level": "C1",
+  "prompt": "Je m'attends ___ ce qu'il refuse.",
+  "options": [
+   "de",
+   "à",
+   "que",
+   "pour"
+  ],
+  "answer": 1,
+  "explanation": "S'attendre à ce que + subjonctif."
+ },
+ {
+  "id": "g078",
+  "topic": "prepositions",
+  "level": "C1",
+  "prompt": "Ce poteau est susceptible ___ flamber sous la charge.",
+  "options": [
+   "à",
+   "pour",
+   "de",
+   "en"
+  ],
+  "answer": 2,
+  "explanation": "Être susceptible de."
+ },
+ {
+  "id": "g079",
+  "topic": "prepositions",
+  "level": "C2",
+  "prompt": "Cette remarque a trait ___ la sécurité du chantier.",
+  "options": [
+   "de",
+   "à",
+   "sur",
+   "avec"
+  ],
+  "answer": 1,
+  "explanation": "Avoir trait à : concerner."
+ },
+ {
+  "id": "g080",
+  "topic": "prepositions",
+  "level": "C1",
+  "prompt": "Le travail consiste ___ vérifier les ferraillages.",
+  "options": [
+   "en",
+   "à",
+   "de",
+   "dans"
+  ],
+  "answer": 1,
+  "explanation": "Consister à + infinitif ; consister en + nom."
+ },
+ {
+  "id": "g081",
+  "topic": "prepositions",
+  "level": "C1",
+  "prompt": "Ce délit est passible ___ une amende.",
+  "options": [
+   "à",
+   "de",
+   "d'",
+   "pour"
+  ],
+  "answer": 2,
+  "explanation": "Être passible de (élision devant voyelle : d'une amende)."
+ },
+ {
+  "id": "g082",
+  "topic": "prepositions",
+  "level": "C1",
+  "prompt": "Elle s'est finalement résolue ___ partir.",
+  "options": [
+   "de",
+   "à",
+   "pour",
+   "en"
+  ],
+  "answer": 1,
+  "explanation": "Se résoudre à + infinitif."
+ },
+ {
+  "id": "g083",
+  "topic": "participe_gerondif",
+  "level": "C1",
+  "prompt": "Ses arguments étaient très ___.",
+  "options": [
+   "convainquants",
+   "convaincants",
+   "convaincant",
+   "convainquant"
+  ],
+  "answer": 1,
+  "explanation": "Adjectif verbal : convaincant, qui s'accorde."
+ },
+ {
+  "id": "g084",
+  "topic": "participe_gerondif",
+  "level": "C1",
+  "prompt": "Les jours ___ l'examen, il a peu dormi.",
+  "options": [
+   "précédents",
+   "précédant",
+   "précédent",
+   "précédantes"
+  ],
+  "answer": 1,
+  "explanation": "Participe présent suivi d'un complément (l'examen) : précédant, invariable."
+ },
+ {
+  "id": "g085",
+  "topic": "participe_gerondif",
+  "level": "C1",
+  "prompt": "C'est un travail très ___.",
+  "options": [
+   "fatiguant",
+   "fatigant",
+   "fatiguante",
+   "fatigante"
+  ],
+  "answer": 1,
+  "explanation": "Adjectif verbal masculin singulier : fatigant (sans u)."
+ },
+ {
+  "id": "g086",
+  "topic": "participe_gerondif",
+  "level": "C1",
+  "prompt": "___ les plans, il a remarqué une incohérence.",
+  "options": [
+   "En vérifiant",
+   "Vérifié",
+   "En vérifié",
+   "Vérifiant de"
+  ],
+  "answer": 0,
+  "explanation": "Gérondif : en + participe présent, même sujet que la principale."
+ },
+ {
+  "id": "g087",
+  "topic": "participe_gerondif",
+  "level": "C2",
+  "prompt": "Ces deux solutions sont très ___.",
+  "options": [
+   "différantes",
+   "différentes",
+   "différant",
+   "différents"
+  ],
+  "answer": 1,
+  "explanation": "Adjectif : différent, différentes. Le participe s'écrit différant."
+ },
+ {
+  "id": "g088",
+  "topic": "paronymes",
+  "level": "C2",
+  "prompt": "La ___ économique actuelle freine les investissements.",
+  "options": [
+   "conjecture",
+   "conjoncture",
+   "conjonction",
+   "conjuration"
+  ],
+  "answer": 1,
+  "explanation": "Conjoncture : situation, ensemble des circonstances. Conjecture : hypothèse."
+ },
+ {
+  "id": "g089",
+  "topic": "paronymes",
+  "level": "C2",
+  "prompt": "Il a enfin ___ la santé après des mois de repos.",
+  "options": [
+   "recouvert",
+   "recouvré",
+   "retrouvé de",
+   "récupéré de"
+  ],
+  "answer": 1,
+  "explanation": "Recouvrer : récupérer. Recouvrir : couvrir entièrement."
+ },
+ {
+  "id": "g090",
+  "topic": "paronymes",
+  "level": "C2",
+  "prompt": "Le départ du ministre est ___ : il partira demain.",
+  "options": [
+   "éminent",
+   "imminent",
+   "immanent",
+   "immédiat"
+  ],
+  "answer": 1,
+  "explanation": "Imminent : sur le point de se produire. Éminent : remarquable."
+ },
+ {
+  "id": "g091",
+  "topic": "paronymes",
+  "level": "C2",
+  "prompt": "Le ___ de la ligne de tramway jusqu'à l'aéroport est prévu.",
+  "options": [
+   "prolongation",
+   "prolongement",
+   "allongement de temps",
+   "prolongeant"
+  ],
+  "answer": 1,
+  "explanation": "Prolongement : dans l'espace. Prolongation : dans le temps."
+ },
+ {
+  "id": "g092",
+  "topic": "paronymes",
+  "level": "C2",
+  "prompt": "L'enquête a révélé une ___ entre l'entreprise et l'élu.",
+  "options": [
+   "collision",
+   "collusion",
+   "coalition",
+   "colision"
+  ],
+  "answer": 1,
+  "explanation": "Collusion : entente secrète. Collision : choc."
+ },
+ {
+  "id": "g093",
+  "topic": "paronymes",
+  "level": "C2",
+  "prompt": "Ce monument ___ le souvenir des victimes.",
+  "options": [
+   "perpètre",
+   "perpétue",
+   "perpétre",
+   "perpétuent"
+  ],
+  "answer": 1,
+  "explanation": "Perpétuer : faire durer. Perpétrer : commettre (un crime)."
+ },
+ {
+  "id": "g094",
+  "topic": "paronymes",
+  "level": "C2",
+  "prompt": "Le juge a ___ une lourde peine au prévenu.",
+  "options": [
+   "affligé",
+   "infligé",
+   "afflige",
+   "inflige à"
+  ],
+  "answer": 1,
+  "explanation": "Infliger une peine. Affliger : causer du chagrin."
+ },
+ {
+  "id": "g095",
+  "topic": "paronymes",
+  "level": "C2",
+  "prompt": "Nous allons ___ la question des délais lors de la réunion.",
+  "options": [
+   "adresser",
+   "aborder",
+   "adresser à",
+   "supporter"
+  ],
+  "answer": 1,
+  "explanation": "Adresser un problème est un anglicisme. On aborde ou on traite une question."
+ },
+ {
+  "id": "g096",
+  "topic": "paronymes",
+  "level": "C2",
+  "prompt": "Je viendrai ___ si j'ai le temps, mais ce n'est pas sûr.",
+  "options": [
+   "finalement",
+   "éventuellement",
+   "actuellement",
+   "effectivement"
+  ],
+  "answer": 1,
+  "explanation": "Éventuellement signifie peut-être, le cas échéant. Ce n'est pas eventually en anglais."
+ },
+ {
+  "id": "g097",
+  "topic": "mise_en_relief",
+  "level": "C1",
+  "prompt": "C'est moi qui ___ signé le contrat.",
+  "options": [
+   "a",
+   "ai",
+   "as",
+   "avons"
+  ],
+  "answer": 1,
+  "explanation": "Le verbe s'accorde avec le pronom mis en relief : moi qui ai."
+ },
+ {
+  "id": "g098",
+  "topic": "mise_en_relief",
+  "level": "C1",
+  "prompt": "C'est nous qui ___ responsables du projet.",
+  "options": [
+   "sont",
+   "sommes",
+   "est",
+   "êtes"
+  ],
+  "answer": 1,
+  "explanation": "Nous qui sommes."
+ },
+ {
+  "id": "g099",
+  "topic": "mise_en_relief",
+  "level": "C1",
+  "prompt": "___ je pense, c'est à ton avenir.",
+  "options": [
+   "Ce que",
+   "Ce dont",
+   "Ce à quoi",
+   "Ce qui"
+  ],
+  "answer": 2,
+  "explanation": "Penser à : ce à quoi."
+ },
+ {
+  "id": "g100",
+  "topic": "mise_en_relief",
+  "level": "C1",
+  "prompt": "___ me dérange, c'est le bruit.",
+  "options": [
+   "Ce que",
+   "Ce qui",
+   "Ce dont",
+   "Qui"
+  ],
+  "answer": 1,
+  "explanation": "Sujet du verbe déranger : ce qui."
+ },
+ {
+  "id": "g101",
+  "topic": "temps_litteraires",
+  "level": "C2",
+  "prompt": "Dès qu'il ___ fini son discours, il quitta la salle.",
+  "options": [
+   "eut",
+   "eût",
+   "a",
+   "avait eu"
+  ],
+  "answer": 0,
+  "explanation": "Passé antérieur dans un récit au passé simple : eut fini, sans accent circonflexe."
+ },
+ {
+  "id": "g102",
+  "topic": "temps_litteraires",
+  "level": "C2",
+  "prompt": "Il fallait qu'il ___ là avant midi. (registre littéraire)",
+  "options": [
+   "fut",
+   "fût",
+   "était",
+   "serait"
+  ],
+  "answer": 1,
+  "explanation": "Subjonctif imparfait : qu'il fût, avec accent circonflexe."
+ },
+ {
+  "id": "g103",
+  "topic": "temps_litteraires",
+  "level": "C2",
+  "prompt": "À peine ___ arrivé que la réunion commença.",
+  "options": [
+   "il fut",
+   "fut-il",
+   "était-il",
+   "il était"
+  ],
+  "answer": 1,
+  "explanation": "À peine en tête de phrase entraîne l'inversion du sujet : à peine fut-il arrivé que."
+ },
+ {
+  "id": "g104",
+  "topic": "temps_litteraires",
+  "level": "C2",
+  "prompt": "Dans « Ils vécurent à Alger », vécurent est :",
+  "options": [
+   "l'imparfait de vivre",
+   "le passé simple de vivre",
+   "le passé simple de vaincre",
+   "le subjonctif de vivre"
+  ],
+  "answer": 1,
+  "explanation": "Vécurent : passé simple de vivre, 3e personne du pluriel."
+ },
+ {
+  "id": "g105",
+  "topic": "temps_litteraires",
+  "level": "C2",
+  "prompt": "Dans « Ils vainquirent l'ennemi », vainquirent vient du verbe :",
+  "options": [
+   "vaincre",
+   "vaquer",
+   "vivre",
+   "venir"
+  ],
+  "answer": 0,
+  "explanation": "Vaincre : ils vainquirent au passé simple."
+ },
+ {
+  "id": "g106",
+  "topic": "subj_conj",
+  "level": "C2",
+  "prompt": "Je n'irai pas, à moins qu'on ne m'y ___.",
+  "options": [
+   "oblige",
+   "obligera",
+   "obligeait",
+   "obligerait"
+  ],
+  "answer": 0,
+  "explanation": "À moins que + subjonctif, avec ne explétif."
+ },
+ {
+  "id": "g107",
+  "topic": "subj_verbes",
+  "level": "C2",
+  "prompt": "Que vous ___ d'accord ou non, la décision est prise.",
+  "options": [
+   "êtes",
+   "soyez",
+   "serez",
+   "seriez"
+  ],
+  "answer": 1,
+  "explanation": "Que... ou non, en tête de phrase : subjonctif."
+ },
+ {
+  "id": "g108",
+  "topic": "subj_verbes",
+  "level": "C2",
+  "prompt": "C'est le meilleur ingénieur que je ___.",
+  "options": [
+   "connais",
+   "connaisse",
+   "connaîtrai",
+   "connaissais"
+  ],
+  "answer": 1,
+  "explanation": "Après un superlatif, le subjonctif est la forme soutenue attendue. L'indicatif est possible pour un fait objectif, mais le test attend le subjonctif."
+ },
+ {
+  "id": "g109",
+  "topic": "subj_verbes",
+  "level": "C2",
+  "prompt": "Je cherche un logiciel qui ___ gérer les calculs sismiques.",
+  "options": [
+   "peut",
+   "puisse",
+   "pourra",
+   "pourrait"
+  ],
+  "answer": 1,
+  "explanation": "Antécédent hypothétique (on ne sait pas s'il existe) : subjonctif."
+ },
+ {
+  "id": "g110",
+  "topic": "concordance",
+  "level": "C2",
+  "prompt": "Il ignorait si elle ___ l'offre.",
+  "options": [
+   "accepte",
+   "accepterait",
+   "accepterai",
+   "accepta"
+  ],
+  "answer": 1,
+  "explanation": "Interrogation indirecte au passé, action future : conditionnel."
+ },
+ {
+  "id": "g111",
+  "topic": "connecteurs",
+  "level": "C2",
+  "prompt": "Le projet est rentable ; ___, il comporte des risques techniques.",
+  "options": [
+   "au demeurant",
+   "du reste",
+   "en revanche",
+   "partant"
+  ],
+  "answer": 2,
+  "explanation": "En revanche marque l'opposition. Au demeurant et du reste ajoutent un argument. Partant marque la conséquence."
+ },
+ {
+  "id": "g112",
+  "topic": "connecteurs",
+  "level": "C2",
+  "prompt": "Les fondations sont fragiles ; ___ l'ouvrage entier est menacé.",
+  "options": [
+   "partant",
+   "pourtant",
+   "toutefois",
+   "quoique"
+  ],
+  "answer": 0,
+  "explanation": "Partant (soutenu) signifie par conséquent."
+ },
+ {
+  "id": "g113",
+  "topic": "connecteurs",
+  "level": "C1",
+  "prompt": "Il est d'autant plus motivé ___ le poste est à Paris.",
+  "options": [
+   "que",
+   "car",
+   "donc",
+   "puisque"
+  ],
+  "answer": 0,
+  "explanation": "D'autant plus... que."
+ },
+ {
+  "id": "g114",
+  "topic": "prepositions",
+  "level": "C2",
+  "prompt": "Il est enclin ___ la prudence.",
+  "options": [
+   "à",
+   "de",
+   "pour",
+   "vers"
+  ],
+  "answer": 0,
+  "explanation": "Être enclin à."
+ },
+ {
+  "id": "g115",
+  "topic": "prepositions",
+  "level": "C1",
+  "prompt": "Nous sommes en mesure ___ livrer en mars.",
+  "options": [
+   "à",
+   "de",
+   "pour",
+   "que"
+  ],
+  "answer": 1,
+  "explanation": "Être en mesure de + infinitif."
+ },
+ {
+  "id": "g116",
+  "topic": "paronymes",
+  "level": "C2",
+  "prompt": "Le ___ des impôts est passé hier.",
+  "options": [
+   "précepteur",
+   "percepteur",
+   "perceur",
+   "précurseur"
+  ],
+  "answer": 1,
+  "explanation": "Percepteur : agent qui perçoit les impôts. Précepteur : enseignant privé."
+ },
+ {
+  "id": "g117",
+  "topic": "registres",
+  "level": "C2",
+  "prompt": "Quel mot appartient au registre soutenu ?",
+  "options": [
+   "bosser",
+   "œuvrer",
+   "taffer",
+   "boulot"
+  ],
+  "answer": 1,
+  "explanation": "Œuvrer est soutenu. Les autres sont familiers."
+ },
+ {
+  "id": "g118",
+  "topic": "registres",
+  "level": "C2",
+  "prompt": "« Force est de constater que les délais n'ont pas été tenus. » Le locuteur :",
+  "options": [
+   "s'en réjouit",
+   "reconnaît un fait à contrecœur",
+   "nie le retard",
+   "félicite l'équipe"
+  ],
+  "answer": 1,
+  "explanation": "Force est de constater : on est obligé d'admettre, souvent un fait négatif."
+ },
+ {
+  "id": "g119",
+  "topic": "registres",
+  "level": "C2",
+  "prompt": "« Ce soi-disant expert n'a jamais vu un chantier. » Le ton est :",
+  "options": [
+   "admiratif",
+   "neutre",
+   "méprisant",
+   "enthousiaste"
+  ],
+  "answer": 2,
+  "explanation": "Soi-disant exprime le doute et ici le mépris envers une compétence revendiquée."
+ },
+ {
+  "id": "g120",
+  "topic": "registres",
+  "level": "C2",
+  "prompt": "« Il sied de rappeler les règles. » Le registre est :",
+  "options": [
+   "familier",
+   "courant",
+   "soutenu",
+   "argotique"
+  ],
+  "answer": 2,
+  "explanation": "Il sied de : il convient de, registre soutenu."
+ },
+ {
+  "id": "g121",
+  "topic": "subj_conj",
+  "level": "C1",
+  "prompt": "Je lui ai tout expliqué de peur qu'il ne ___ une erreur.",
+  "options": [
+   "commet",
+   "commette",
+   "commettra",
+   "commettait"
+  ],
+  "answer": 1,
+  "explanation": "De peur que + subjonctif."
+ },
+ {
+  "id": "g122",
+  "topic": "accord_pp",
+  "level": "C2",
+  "prompt": "La maison que j'ai ___ construire est terminée.",
+  "options": [
+   "faite",
+   "fait",
+   "faits",
+   "faites"
+  ],
+  "answer": 1,
+  "explanation": "Fait suivi d'un infinitif est toujours invariable."
+ },
+ {
+  "id": "g123",
+  "topic": "accord_pp",
+  "level": "C2",
+  "prompt": "Les musiciens que j'ai ___ jouer étaient excellents.",
+  "options": [
+   "entendu",
+   "entendus",
+   "entendues",
+   "entendue"
+  ],
+  "answer": 1,
+  "explanation": "Les musiciens font l'action de jouer : le COD placé avant fait l'action, accord. Ce sont les musiciens que j'ai entendus jouer."
+ },
+ {
+  "id": "g124",
+  "topic": "hypothese",
+  "level": "C2",
+  "prompt": "Dans l'hypothèse où le budget ___ réduit, le projet serait revu.",
+  "options": [
+   "est",
+   "serait",
+   "soit",
+   "sera"
+  ],
+  "answer": 1,
+  "explanation": "Dans l'hypothèse où + conditionnel."
+ },
+ {
+  "id": "g125",
+  "topic": "mise_en_relief",
+  "level": "C2",
+  "prompt": "La décision de reporter le chantier a été prise. Quelle nominalisation est correcte ?",
+  "options": [
+   "Le report du chantier a été décidé.",
+   "Le reporter du chantier est décidé.",
+   "La reportation du chantier a été décidée.",
+   "Le reportage du chantier a été décidé."
+  ],
+  "answer": 0,
+  "explanation": "Le nom de reporter est le report. Reportage est un autre mot (journalisme)."
+ }
+]

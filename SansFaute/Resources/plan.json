@@ -1,0 +1,1067 @@
+[
+ {
+  "day": 1,
+  "date": "2026-10-07",
+  "phase": "Semaine 1 · Diagnostic et écoute",
+  "tasks": [
+   {
+    "kind": "test",
+    "minutes": 30,
+    "label": "Test de diagnostic complet (mode examen)"
+   },
+   {
+    "kind": "listening",
+    "minutes": 15,
+    "label": "Écoute guidée",
+    "ref": "l01"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : 15 nouvelles cartes"
+   },
+   {
+    "kind": "review",
+    "minutes": 5,
+    "label": "Noter tes erreurs par type"
+   }
+  ]
+ },
+ {
+  "day": 2,
+  "date": "2026-10-08",
+  "phase": "Semaine 1 · Diagnostic et écoute",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute guidée avec transcription",
+    "ref": "l01"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : RFI : journal en français (10 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "subj_conj"
+   },
+   {
+    "kind": "reading",
+    "minutes": 0,
+    "label": "Bonus lecture si tu as 10 min",
+    "ref": "r01"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 3,
+  "date": "2026-10-09",
+  "phase": "Semaine 1 · Diagnostic et écoute",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute guidée avec transcription",
+    "ref": "l02"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : TV5Monde Apprendre : exercice C1 (10 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "subj_verbes"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 4,
+  "date": "2026-10-10",
+  "phase": "Semaine 1 · Diagnostic et écoute",
+  "tasks": [
+   {
+    "kind": "mock",
+    "minutes": 45,
+    "label": "Test blanc chronométré"
+   },
+   {
+    "kind": "review",
+    "minutes": 15,
+    "label": "Analyser chaque erreur du test blanc"
+   }
+  ]
+ },
+ {
+  "day": 5,
+  "date": "2026-10-11",
+  "phase": "Semaine 1 · Diagnostic et écoute",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute guidée avec transcription",
+    "ref": "l03"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : Podcast au choix sur la science ou l'architecture (15 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "concordance"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 6,
+  "date": "2026-10-12",
+  "phase": "Semaine 1 · Diagnostic et écoute",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute guidée avec transcription",
+    "ref": "l04"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : France Inter : journal de 7 h ou 8 h (10 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "discours_indirect"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 7,
+  "date": "2026-10-13",
+  "phase": "Semaine 1 · Diagnostic et écoute",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute guidée avec transcription",
+    "ref": "l05"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : France Culture : un épisode d'émission (15 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "relatifs"
+   },
+   {
+    "kind": "reading",
+    "minutes": 0,
+    "label": "Bonus lecture si tu as 10 min",
+    "ref": "r02"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 8,
+  "date": "2026-10-14",
+  "phase": "Semaine 2 · Grammaire et écoute longue",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l06"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : RFI : journal en français (10 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "pronoms_y_en"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 9,
+  "date": "2026-10-15",
+  "phase": "Semaine 2 · Grammaire et écoute longue",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l07"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : TV5Monde Apprendre : exercice C1 (10 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "accord_pp"
+   },
+   {
+    "kind": "reading",
+    "minutes": 0,
+    "label": "Bonus lecture si tu as 10 min",
+    "ref": "r03"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 10,
+  "date": "2026-10-16",
+  "phase": "Semaine 2 · Grammaire et écoute longue",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l08"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : France Culture : débat ou interview (15 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "hypothese"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 11,
+  "date": "2026-10-17",
+  "phase": "Semaine 2 · Grammaire et écoute longue",
+  "tasks": [
+   {
+    "kind": "mock",
+    "minutes": 45,
+    "label": "Test blanc chronométré"
+   },
+   {
+    "kind": "review",
+    "minutes": 15,
+    "label": "Analyser chaque erreur du test blanc"
+   }
+  ]
+ },
+ {
+  "day": 12,
+  "date": "2026-10-18",
+  "phase": "Semaine 2 · Grammaire et écoute longue",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l09"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : France Inter : journal de 7 h ou 8 h (10 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "prepositions"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 13,
+  "date": "2026-10-19",
+  "phase": "Semaine 2 · Grammaire et écoute longue",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l10"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : France Culture : un épisode d'émission (15 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "participe_gerondif"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 14,
+  "date": "2026-10-20",
+  "phase": "Semaine 2 · Grammaire et écoute longue",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l11"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : RFI : journal en français (10 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "connecteurs"
+   },
+   {
+    "kind": "reading",
+    "minutes": 0,
+    "label": "Bonus lecture si tu as 10 min",
+    "ref": "r04"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 15,
+  "date": "2026-10-21",
+  "phase": "Semaine 3 · Précision et vitesse",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l12"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : TV5Monde Apprendre : exercice C1 (10 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "paronymes"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 16,
+  "date": "2026-10-22",
+  "phase": "Semaine 3 · Précision et vitesse",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l13"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : France Culture : débat ou interview (15 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "mise_en_relief"
+   },
+   {
+    "kind": "reading",
+    "minutes": 0,
+    "label": "Bonus lecture si tu as 10 min",
+    "ref": "r05"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 17,
+  "date": "2026-10-23",
+  "phase": "Semaine 3 · Précision et vitesse",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l14"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : Podcast au choix sur la science ou l'architecture (15 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "registres"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 18,
+  "date": "2026-10-24",
+  "phase": "Semaine 3 · Précision et vitesse",
+  "tasks": [
+   {
+    "kind": "mock",
+    "minutes": 45,
+    "label": "Test blanc chronométré"
+   },
+   {
+    "kind": "review",
+    "minutes": 15,
+    "label": "Analyser chaque erreur du test blanc"
+   }
+  ]
+ },
+ {
+  "day": 19,
+  "date": "2026-10-25",
+  "phase": "Semaine 3 · Précision et vitesse",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l15"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : France Culture : un épisode d'émission (15 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "temps_litteraires"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 20,
+  "date": "2026-10-26",
+  "phase": "Semaine 3 · Précision et vitesse",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l16"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : RFI : journal en français (10 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "subj_conj"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 21,
+  "date": "2026-10-27",
+  "phase": "Semaine 3 · Précision et vitesse",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l17"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : TV5Monde Apprendre : exercice C1 (10 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "subj_verbes"
+   },
+   {
+    "kind": "reading",
+    "minutes": 0,
+    "label": "Bonus lecture si tu as 10 min",
+    "ref": "r06"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 22,
+  "date": "2026-10-28",
+  "phase": "Semaine 4 · Tests blancs",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l18"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : France Culture : débat ou interview (15 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "concordance"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 23,
+  "date": "2026-10-29",
+  "phase": "Semaine 4 · Tests blancs",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l01"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : Podcast au choix sur la science ou l'architecture (15 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "discours_indirect"
+   },
+   {
+    "kind": "reading",
+    "minutes": 0,
+    "label": "Bonus lecture si tu as 10 min",
+    "ref": "r07"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 24,
+  "date": "2026-10-30",
+  "phase": "Semaine 4 · Tests blancs",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l02"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : France Inter : journal de 7 h ou 8 h (10 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "relatifs"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 25,
+  "date": "2026-10-31",
+  "phase": "Semaine 4 · Tests blancs",
+  "tasks": [
+   {
+    "kind": "mock",
+    "minutes": 45,
+    "label": "Test blanc chronométré"
+   },
+   {
+    "kind": "review",
+    "minutes": 15,
+    "label": "Analyser chaque erreur du test blanc"
+   }
+  ]
+ },
+ {
+  "day": 26,
+  "date": "2026-11-01",
+  "phase": "Semaine 4 · Tests blancs",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l03"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : RFI : journal en français (10 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "pronoms_y_en"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 27,
+  "date": "2026-11-02",
+  "phase": "Semaine 4 · Tests blancs",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l04"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : TV5Monde Apprendre : exercice C1 (10 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "accord_pp"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 28,
+  "date": "2026-11-03",
+  "phase": "Semaine 4 · Tests blancs",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen (une seule écoute)",
+    "ref": "l05"
+   },
+   {
+    "kind": "external",
+    "minutes": 0,
+    "label": "En plus (trajet, repas) : France Culture : débat ou interview (15 min)"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 15,
+    "label": "Leçon + exercices",
+    "ref": "hypothese"
+   },
+   {
+    "kind": "reading",
+    "minutes": 0,
+    "label": "Bonus lecture si tu as 10 min",
+    "ref": "r08"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Vocabulaire : cartes dues + 10 nouvelles"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 29,
+  "date": "2026-11-04",
+  "phase": "Derniers jours · Léger et précis",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen",
+    "ref": "l06"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 10,
+    "label": "Relire un piège de grammaire",
+    "ref": "prepositions"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Révision des cartes dues"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 30,
+  "date": "2026-11-05",
+  "phase": "Derniers jours · Léger et précis",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen",
+    "ref": "l07"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 10,
+    "label": "Relire un piège de grammaire",
+    "ref": "participe_gerondif"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Révision des cartes dues"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 31,
+  "date": "2026-11-06",
+  "phase": "Derniers jours · Léger et précis",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen",
+    "ref": "l08"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 10,
+    "label": "Relire un piège de grammaire",
+    "ref": "connecteurs"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Révision des cartes dues"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 32,
+  "date": "2026-11-07",
+  "phase": "Derniers jours · Léger et précis",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 20,
+    "label": "Écoute en mode examen",
+    "ref": "l09"
+   },
+   {
+    "kind": "lesson",
+    "minutes": 10,
+    "label": "Relire un piège de grammaire",
+    "ref": "paronymes"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Révision des cartes dues"
+   },
+   {
+    "kind": "daily",
+    "minutes": 15,
+    "label": "Test du jour"
+   }
+  ]
+ },
+ {
+  "day": 33,
+  "date": "2026-11-08",
+  "phase": "Derniers jours · Léger et précis",
+  "tasks": [
+   {
+    "kind": "listening",
+    "minutes": 15,
+    "label": "Une écoute facile pour rester dans le bain",
+    "ref": "l10"
+   },
+   {
+    "kind": "vocab",
+    "minutes": 10,
+    "label": "Révision des cartes connues seulement"
+   },
+   {
+    "kind": "rest",
+    "minutes": 0,
+    "label": "Prépare convocation, passeport, trajet. Dors tôt."
+   }
+  ]
+ }
+]
