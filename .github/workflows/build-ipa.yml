@@ -45,12 +45,20 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
-            build | tee build.log | grep -E "error:|warning: unre|BUILD (SUCCEEDED|FAILED)" || true
-          test -d build/Build/Products/Release-iphoneos/SansFaute.app
+            build > build.log 2>&1 || true
+          grep -E "error:|BUILD (SUCCEEDED|FAILED)" build.log | head -80 || true
+          # The .app folder exists before compiling, so check for the real executable.
+          test -f build/Build/Products/Release-iphoneos/SansFaute.app/SansFaute
 
-      - name: Show compiler errors
+      - name: Publish compiler errors
         if: failure()
-        run: grep -n "error:" build.log | head -50 || true
+        run: |
+          grep -E "error:|note:|BUILD FAILED" build.log | sed "s#$GITHUB_WORKSPACE/##" | head -200 > build-errors.txt || true
+          tail -60 build.log >> build-errors.txt
+          gh release delete build-errors -y --cleanup-tag || true
+          gh release create build-errors build-errors.txt --prerelease --title "Build errors" --notes "Latest failed build"
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Package IPA
         run: |
@@ -58,6 +66,9 @@ jobs:
           cp -R build/Build/Products/Release-iphoneos/SansFaute.app Payload/
           zip -qry SansFaute.ipa Payload
           ls -lh SansFaute.ipa
+          gh release delete build-errors -y --cleanup-tag || true
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Upload IPA artifact
         uses: actions/upload-artifact@v4
